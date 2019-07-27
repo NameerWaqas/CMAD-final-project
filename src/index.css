@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.sliderImg{
+object-fit: fill;
+width: 100%;
+height: 300px;
+}
+.NavBarSection{
+
+  display: inline-block;
+  position: absolute;
+  right: 0%;
+  margin: auto;
+  margin-top: 2px;
+width: 90%;
+text-align: right;
+}
+.NavBarSection>button{
+  margin-left: 1%;
+  border: hidden;
+  background-color: inherit;
+  font-size: 140%;
+  color: white;
+  opacity: 1;
+}
+.NavBarSection>button:hover
+{
+color:black;
+}
+
+.NavBarSpan{
+  position: absolute;
+  left: 0%;
+  margin: auto;
+  font-size: 180%;
+font-weight: bold;
+color: white;
+}
+.NavBar{
+  width: 100%;
+  height: 50px;
+   position: fixed;   
+  top: 0%;
+  z-index: 1;
+  background-color:#0097a7 ;
+  opacity: 0.8;  
+}
+.SliderDiv{
+  margin-top: 50px;
+}
