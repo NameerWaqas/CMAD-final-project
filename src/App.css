@@ -31,3 +31,80 @@
     transform: rotate(360deg);
   }
 }
+#LoginPageDiv{
+  width: 100%;
+  /* height: 200%; */
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-content: center; */
+  /* align-self: center;   */
+  /* background-color: rgb(255, 245, 231) */
+  
+}
+#LoginPageSection
+{
+  
+  background-color: rgb(209, 209, 209);
+width: 50%;
+height: 400px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-content: center; */
+align-self: center;
+}
+#LoginPageSection>input
+{  
+width: 90%;
+height: 50px;
+margin: 2%;
+border: hidden;
+border-bottom: solid;
+outline: none;
+box-shadow: none;
+margin-top: 5%;
+}
+#LoginPageSection>h2{
+  color: white;  
+}
+#LoginPageSection>button
+{
+  width: 50%;
+}
+#HomeContent
+{
+  text-align: left;
+  text-indent: 40px;
+}
+#HomecContentList{
+  text-align: left;
+}
+@media screen and (max-width: 702px) {
+  .NavBarSection>button {
+   font-size: 70%;
+   margin-top:3%
+  } 
+  #LoginPageSection
+  {
+    width: 70%
+  }
+}
+
+@media screen and (max-width: 502px) {
+  .NavBarSection>button {
+   font-size: 60%;
+   margin-top:2%
+  }
+  .NavBarSection{
+    width: 95%
+  }
+  .NavBarSpan
+  {
+    font-size: 120%;    
+  }
+  #LoginPageSection
+  {
+    width: 90%
+  }
+}
