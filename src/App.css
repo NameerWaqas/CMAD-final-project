@@ -80,6 +80,39 @@ margin-top: 5%;
 #HomecContentList{
   text-align: left;
 }
+.studentPortalClassesButton
+{
+  margin: 2%;
+  width: 75%;
+  height: 50px;
+}
+.studentPortalClassesButton:hover{
+  transition: 300ms;
+  transform: rotateY(360deg);
+}
+.studentPortalDiv
+{
+  background-color:white;
+}
+.studentPortalTableCells
+{
+border: 2px solid black  
+}
+#studentPortalTable
+{
+  width:80%;
+  margin: auto;
+  background-color: white;
+
+}#studentPortalTableDiv
+{
+  width: 100%;
+background-color: rgb(204, 204, 204)
+
+}
+
+
+
 @media screen and (max-width: 702px) {
   .NavBarSection>button {
    font-size: 70%;
@@ -88,6 +121,9 @@ margin-top: 5%;
   #LoginPageSection
   {
     width: 70%
+  }
+  .studentPortalClassesButton:hover{
+    height: 55px;
   }
 }
 
@@ -106,5 +142,8 @@ margin-top: 5%;
   #LoginPageSection
   {
     width: 90%
+  }
+  .studentPortalClassesButton:hover{
+    height: 55px;
   }
 }
