@@ -1,13 +1,492 @@
 import React from 'react';
 import Home from "./Home";
 import LoginPage from "./LoginPage";
-import StudentPortal from "./StudentPortal"
+import StudentPortal from "./StudentPortal";
+import Events from "./Events";
+import ContactUs from "./ContactUs";
+import AboutUs from "./AboutUs";
+import DropDown from "../components/NavBarDropDown/DropDown";
+
 class NavBar extends React.Component {
     constructor() {
         super();
 
         this.state = {
             view: "home",
+            class1: [
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "farzan Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Nameer Waqas",
+                    fName:"Abdul Wahab"
+                },
+                {
+                    name: "Sabeer Waqas",
+                    fName:"Abdul Wahab"
+
+                },
+                {
+                    name: "Faiez Waqas",
+                    fName:"Abdul Wahab"
+                }
+            ]
         };
     }
 
@@ -19,26 +498,26 @@ class NavBar extends React.Component {
             return <Home />
         }
         else if (this.state.view == "studentPortal") {
-            return <StudentPortal />
+            return <StudentPortal view={this.state.class1} />
         }
         else if (this.state.view == "events") {
-            return <StudentPortal />
+            return <Events />
         }
         else if (this.state.view == "contactUs") {
-            return <StudentPortal />
+            return <ContactUs />
         }
         else if (this.state.view == "aboutUs") {
-            return <StudentPortal />
+            return <AboutUs />
         }
         else if (this.state.view == "login") {
-            return <LoginPage />
+            return <LoginPage view={this.state.class1}/>
         }
     }
     render() {
         return (
             <div>
                 <div className="NavBar">
-                    <span className="NavBarSpan">LOGO</span>
+                    <span className="NavBarSpan">MySchool</span>
                     <section className="NavBarSection">
                         <button onClick={() => this.routing("home")}>Home</button>
                         <button onClick={() => this.routing("studentPortal")}>Student Portal</button>
@@ -47,11 +526,15 @@ class NavBar extends React.Component {
                         <button onClick={() => this.routing("contactUs")}>Contact Us</button>
                         <button onClick={() => this.routing("login")}>Login</button>
                     </section>
+                    <section className="DropDown">
+                        <DropDown routing={this.routing}/>
+                    </section>
                 </div>
                 <div id="MarginedDiv">
                     {this.renderFunction()}
                 </div>
             </div>
         )
-    }}
+    }
+}
 export default NavBar;

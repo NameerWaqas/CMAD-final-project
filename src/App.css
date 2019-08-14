@@ -110,14 +110,28 @@ border: 2px solid black
 background-color: rgb(204, 204, 204)
 
 }
-
-
-
-@media screen and (max-width: 702px) {
+.DropDownButtons{
+  border: hidden;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+}
+/* .DropDownButtons:hover{font-size: 200%} */
+.DropDown
+{
+  display: none;
+  }
+.DropDownButton{
+  background-color: white;
+}
+@media screen and (max-width: 1000px) {
   .NavBarSection>button {
    font-size: 70%;
    margin-top:3%
   } 
+  .NavBarSection{
+    margin: auto;
+  }
   #LoginPageSection
   {
     width: 70%
@@ -125,20 +139,21 @@ background-color: rgb(204, 204, 204)
   .studentPortalClassesButton:hover{
     height: 55px;
   }
+  .DropDown
+{
+  display: none;
+}
+#ContactUsPageDiv
+{
+    
+}
 }
 
-@media screen and (max-width: 502px) {
+@media screen and (max-width: 615px) {
   .NavBarSection>button {
    font-size: 60%;
    margin-top:2%
-  }
-  .NavBarSection{
-    width: 95%
-  }
-  .NavBarSpan
-  {
-    font-size: 120%;    
-  }
+  }  
   #LoginPageSection
   {
     width: 90%
@@ -146,4 +161,17 @@ background-color: rgb(204, 204, 204)
   .studentPortalClassesButton:hover{
     height: 55px;
   }
+  .NavBarSection
+  {
+    display: none;
+  }
+  .DropDown
+  {
+    display: inline-block;
+    position: fixed;
+    right: 1%;
+    margin: auto;
+    z-index: 10;
+  }
 }
+

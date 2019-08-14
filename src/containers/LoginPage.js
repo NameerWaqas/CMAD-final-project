@@ -12,29 +12,9 @@ class LoginPage extends React.Component {
         check:"loggedOut"
 
          }
-    }
-    // getParam = (param, TargetObj) => {
-    //     if (TargetObj == "id") {
-    //         this.setState({
-    //             id: param
-    //         })
-    //     }
-    //     else {
-    //         this.setState({
-    //             password: param
-    //         })
-    //     }
-    // }
-    // Authenticate = () => {
-    //     if (this.state.id == "nameer" && this.state.password == "waqas") {
-    //         this.setState({
-    //             check: true
-    //         }
-    //         )
-    //     }
-    //     else
-    //         alert("Invalid Email or Password")
-    // }
+        }
+        // var defaultAuth = firebase.auth();
+    
     LoginPageRouting=()=>
     {
         if(this.state.check=="loggedOut")
@@ -54,6 +34,9 @@ class LoginPage extends React.Component {
             }
         )
     }
+    
+// Get the Auth service for the default app
+
     render() {
         return (
             // <div id="LoginPageDiv">
@@ -105,6 +88,16 @@ class WhenLoggedOut extends React.Component {
         }
         else
             alert("Invalid Email or Password")
+        // defaultAuth.signInWithEmailPassword(thsi.state.id,this.state.password).then(
+        //     (function(){
+        //         this.props.prop("loggedIn");
+        //     })()
+        // ).catch(function(){
+        //     console.log("Inalid Email or password");}
+        // )
+        
+
+    
     }
     render() {
         return (
