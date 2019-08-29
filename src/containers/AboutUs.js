@@ -3,7 +3,11 @@ function AboutUs()
 {
     return(
         <div id="ContactUsPageDiv">
-            <h1>About us page</h1>
+
+            
+
+            
+
         </div>
     )
 }

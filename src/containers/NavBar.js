@@ -6,6 +6,7 @@ import Events from "./Events";
 import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import DropDown from "../components/NavBarDropDown/DropDown";
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class NavBar extends React.Component {
     constructor() {
@@ -16,524 +17,665 @@ class NavBar extends React.Component {
             class1: [
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
+
                 },
                 {
                     name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
 
                 },
                 {
                     name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 },
                 {
                     name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "farzan Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Nameer Waqas",
-                    fName:"Abdul Wahab"
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName:"Abdul Wahab"
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName:"Abdul Wahab"
+                    fName: "Abdul Wahab",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied"
                 }
+
             ]
         };
     }
-
-    routing = (value) => {
-        this.setState({ view: value });
-    }
-    renderFunction = () => {
-        if (this.state.view == "home") {
-            return <Home />
-        }
-        else if (this.state.view == "studentPortal") {
-            return <StudentPortal view={this.state.class1} />
-        }
-        else if (this.state.view == "events") {
-            return <Events />
-        }
-        else if (this.state.view == "contactUs") {
-            return <ContactUs />
-        }
-        else if (this.state.view == "aboutUs") {
-            return <AboutUs />
-        }
-        else if (this.state.view == "login") {
-            return <LoginPage view={this.state.class1}/>
-        }
-    }
     render() {
         return (
-            <div>
-                <div className="NavBar">
-                    <span className="NavBarSpan">MySchool</span>
-                    <section className="NavBarSection">
-                        <button onClick={() => this.routing("home")}>Home</button>
-                        <button onClick={() => this.routing("studentPortal")}>Student Portal</button>
-                        <button onClick={() => this.routing("events")}>Events</button>
-                        <button onClick={() => this.routing("aboutUs")}>About Us</button>
-                        <button onClick={() => this.routing("contactUs")}>Contact Us</button>
-                        <button onClick={() => this.routing("login")}>Login</button>
-                    </section>
-                    <section className="DropDown">
-                        <DropDown routing={this.routing}/>
-                    </section>
-                </div>
-                <div id="MarginedDiv">
-                    {this.renderFunction()}
-                </div>
-            </div>
+            <BrowserRouter>
+
+                    <div className="NavBar">
+                        <span className="NavBarSpan">MySchool</span>
+                        <section className="NavBarSection">
+                            <button><a style={{color:"white"}} href="/">Home</a></button>
+                            <button><a style={{color:"white"}} href="/studentPortal">Student Portal</a></button>
+                            <button><a style={{color:"white"}} href="/events">Events</a></button>
+                            <button><a style={{color:"white"}} href="/aboutUs">About Us</a></button>
+                            <button><a style={{color:"white"}} href="/contactus">Contact Us</a></button>
+                            <button><a style={{color:"white"}} href="/login">Login</a></button>
+                        </section>
+                        <section className="DropDown">
+                            <DropDown routing={this.routing} />
+                        </section>
+                    </div>
+                    <div id="MarginedDiv">
+                        <Route exact path="/" component={() => <Home />} />
+                        <Route path="/studentPortal" component={() => <StudentPortal view={this.state.class1} />} />
+                        <Route path="/events" component={() => <Events />} />
+                        <Route path="/aboutUs" component={() => <AboutUs />} />
+                        <Route path="/contactUs" component={() => <ContactUs />} />
+                        <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1} />} />
+                    </div>                
+            </BrowserRouter>
         )
     }
 }

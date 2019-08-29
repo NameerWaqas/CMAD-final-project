@@ -19,18 +19,18 @@ export default class DorpDown extends React.Component {
 
   render() {
     return (
-      <Dropdown   isOpen={this.state.dropdownOpen} toggle={this.toggle} >
-        <DropdownToggle className="DropDownButton" caret>
-          Navigation
+      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
+        <DropdownToggle color="primary" className="DropDownButton" caret>
+          Tap me!
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem ><button className="DropDownButtons" onClick={() => this.props.routing("home")}>Home</button></DropdownItem>
-          <DropdownItem><button className="DropDownButtons" onClick={() => this.props.routing("studentPortal")}>Student Portal</button></DropdownItem>
-          <DropdownItem ><button className="DropDownButtons" onClick={() => this.props.routing("events")}>Events</button></DropdownItem>
+          <DropdownItem ><a className="DropDownButtons" href="/" id="q">Home</a></DropdownItem>
+          <DropdownItem><a className="DropDownButtons" href="/studentPortal">Student Portal</a></DropdownItem>
+          <DropdownItem ><a className="DropDownButtons" href="/events">Events</a></DropdownItem>
+          <DropdownItem><a className="DropDownButtons" href="/aboutUs">About Us</a></DropdownItem>
+          <DropdownItem><a className="DropDownButtons" href="/contactus">Contact Us</a></DropdownItem>
           <DropdownItem divider />
-          <DropdownItem><button className="DropDownButtons" onClick={() => this.props.routing("aboutUs")}>About Us</button></DropdownItem>
-          <DropdownItem> <button className="DropDownButtons" onClick={() => this.props.routing("contactUs")}>Contact Us</button></DropdownItem>
-          <DropdownItem><button className="DropDownButtons" onClick={() => this.props.routing("login")}>Login</button></DropdownItem>
+          <DropdownItem><a  className="DropDownButtons" href="/login">Login</a></DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );

@@ -9,19 +9,20 @@ import {
 
 const items = [
   {
-    src: 'https://images.pexels.com/photos/1020315/pexels-photo-1020315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 ',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    src: 'https://www.desktopbackground.org/p/2014/02/22/721176_9-fantastic-hd-school-wallpapers-hdwallsource-com_1600x1200_h.jpg',
+    altText: '',
+    caption: ''
   },
   {
-    src: 'https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'https://www.desktopbackground.org/p/2014/02/22/721171_school-bus-vintage-hd-images-top-fullscreen-hd-wallpapers-desktop_1920x1080_h.jpg',
+    altText: '',
+    caption: ''
   },
+  
   {
-    src: 'https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: 'https://www.desktopbackground.org/p/2013/07/01/600675_school-wallpapers_1600x1200_h.jpg',
+    altText: '',
+    caption: ''
   }
 ];
 

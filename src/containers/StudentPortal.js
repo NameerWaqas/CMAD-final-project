@@ -13,14 +13,14 @@ class StudentPortal extends React.Component {
 
     routing = (value) => {
         console.log(this.state.studentData)
-        this.setState({ view: value});
+        this.setState({ view: value });
     }
-    setStudentData = (dataObject) => { 
-                 this.state.studentData=dataObject
+    setStudentData = (dataObject) => {
+        this.state.studentData = dataObject
     }
 
     renderFunction = () => {
-        if (this.state.view == "default") {
+        if (this.state.view == "default"){
             return <StudentPortalDefaulView routing={this.routing} />
         }
         else if (this.state.view > 0 && this.state.view <= 10) {
@@ -28,23 +28,23 @@ class StudentPortal extends React.Component {
                 case 1:
                     return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 2:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 3:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 4:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 5:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 6:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 7:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 8:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 9:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 case 10:
-                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing}/>
+                    return <StudentsTable tableNumber={this.props.view} setStudentDataProp={this.setStudentData} routing={this.routing} />
                 default:
                     console.log("inavlid value");
             }
@@ -56,7 +56,6 @@ class StudentPortal extends React.Component {
     }
     render() {
         return (
-
             <div className="studentPortalDiv">
                 {this.renderFunction()}
             </div>
@@ -80,11 +79,12 @@ class StudentPortalDefaulView extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="studentPortalDefaultView">
                 {this.state.arr1.map((param, ind) => {
                     return <div ><Button className="studentPortalClassesButton"
                         onClick={() => this.renderStudentsTable(ind + 1)}
-                    ><p>class {param}</p></Button></div>
+                    ><p>Class {param}</p></Button></div>
+                    
                 }
                 )}
             </div>
@@ -116,12 +116,13 @@ class StudentsTable extends React.Component {
 
                     </tr>
                     {this.props.tableNumber.map((obj, index) => {
-                        return <tr className="studentPortalTableCells">
+                        return <tr onClick={() => this.CallerFunction(obj, "studentData")}
+                            className="studentPortalTableCells">
                             <td className="studentPortalTableCells">
                                 {index + 1}
                             </td>
                             <td className="studentPortalTableCells">
-                                <a onClick={() => this.CallerFunction(obj, "studentData")}
+                                <a
                                 > {obj.name}</a>
                             </td>
                             <td className="studentPortalTableCells">
@@ -142,11 +143,18 @@ class StudentData extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div><label>Name: {this.props.StudentObject.name}</label></div>
-                <div><label>Father Name: {this.props.StudentObject.fName}</label></div>
+            <div id="studentDataParentDiv">
+                <div className="studentdataDiv"><label>Name: {this.props.StudentObject.name}</label></div>
+                <div className="studentdataDiv"><label>Father Name: {this.props.StudentObject.fName}</label></div>
+                <div className="studentdataDiv"><label>Dues left: {this.props.StudentObject.duesLeft}</label></div>
+                <div className="studentdataDiv"><label>Class Teacher: {this.props.StudentObject.classTeacher}</label></div>
+                <div className="studentdataDiv"><label>Monthly Attendance: {this.props.StudentObject.monthlyAttendance}</label></div>
+                <div className="studentdataDiv"><label>Test Record: {this.props.StudentObject.testRecord}</label></div>
+                <div className="studentdataDiv"><label>OverallStatus: {this.props.StudentObject.overallStatus}</label></div>
+
             </div>
         )
     }
 }
+
 export default StudentPortal;

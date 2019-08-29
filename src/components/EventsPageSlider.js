@@ -9,19 +9,19 @@ import {
 
 const items = [
   {
-    src: 'https://images.pexels.com/photos/1020315/pexels-photo-1020315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 ',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    src: 'http://www.weddingtonchristianacademy.org/editoruploads/images/School-events.jpg',
+    // altText: 'Slide 1',
+    // caption: 'Slide 1'
   },
   {
-    src: 'https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'https://secure.i.telegraph.co.uk/multimedia/archive/02968/Sports_2968855b.jpg',
+    // altText: 'Slide 2',
+    // caption: 'Slide 2'
   },
   {
-    src: 'https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: 'https://i.etsystatic.com/19739980/r/il/769b11/1857084995/il_794xN.1857084995_higu.jpg',
+    // altText: 'Slide 3',
+    // caption: 'Slide 3'
   }
 ];
 
