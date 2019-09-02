@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import homepageimg from "../../images/homepageimg.jpg";
-import homepageimg2 from "../../images/homepageimg2.jpg"
-
+import homepageimg2 from "../../images/homepageimg2.JPG";
 
 
 function Content() {

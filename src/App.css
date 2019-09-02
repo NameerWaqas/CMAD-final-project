@@ -154,7 +154,6 @@ background-color: rgb(204, 204, 204)
 {
   display: none;
 }
-
 }
 
 @media screen and (max-width: 615px) {
@@ -181,6 +180,11 @@ background-color: rgb(204, 204, 204)
     margin: auto;
     z-index: 10;   
     height: 50px;
+  }
+  .studentPortalDiv,.studentPortalDefaultView,#LoginPageDiv{
+    background-image: url("./images/studentportalbackgrdimgMobile.JPG");
+    background-size: cover;
+    width: 100%;
   }
 }
 

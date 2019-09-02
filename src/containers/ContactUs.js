@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
-import contactUsPageParallaxImg from "../images/img1.jpg"
+import contactUsPageParallaxImg from "../images/img1.JPG"
 
 function ContactUs() {
     return (

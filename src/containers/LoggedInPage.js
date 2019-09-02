@@ -85,13 +85,15 @@ class LoggedInPageStudentsTable extends React.Component {
     render() {
         return (
             <div id="studentPortalTableDiv">
+                <Button style={{ width: "70%", fontSize: "120%"}}>Add student</Button>
+
                 <table id="studentPortalTable">
                     <tr>
                         <th className="studentPortalTableCells">S.No.</th>
                         <th className="studentPortalTableCells">Name Of Student</th>
                         <th className="studentPortalTableCells">Father Name</th>
-                        <th className="studentPortalTableCells"></th>
-                        <th className="studentPortalTableCells"></th>
+                        <th className="studentPortalTableCells">Edit</th>
+                        <th className="studentPortalTableCells">Delete</th>
 
                     </tr>
                     {this.props.studentsRecord.map((obj, index) => {
@@ -135,13 +137,13 @@ class LoggedInPageStudentData extends React.Component {
     render() {
         return (
             <>
-                <div><label><span className="studentDataSpan">Name:</span><input placeholder={this.props.studentDataObject.name} ></input></label></div>
-                <div><label><span className="studentDataSpan">Father Name:  </span><input placeholder={this.props.studentDataObject.fName} ></input></label></div>
-                <div><label><span className="studentDataSpan">Dues left:    </span><input placeholder={this.props.studentDataObject.duesLeft} ></input></label></div>
-                <div><label><span className="studentDataSpan">Class Teacher:</span><input placeholder={this.props.studentDataObject.classTeacher} ></input></label></div>
-                <div><label><span className="studentDataSpan">Monthly Attendance:</span><input placeholder={this.props.studentDataObject.monthlyAttendance} ></input></label></div>
-                <div><label><span className="studentDataSpan">Test record:</span><input placeholder={this.props.studentDataObject.testRecord} ></input></label></div>
-                <div><label><span className="studentDataSpan">Overall Status:</span><input placeholder={this.props.studentDataObject.overallStatus} ></input></label></div>
+                <div><label><span className="studentDataSpan">Name:</span><input defaultValue={this.props.studentDataObject.name} ></input></label></div>
+                <div><label><span className="studentDataSpan">Father Name:  </span><input defaultValue={this.props.studentDataObject.fName} ></input></label></div>
+                <div><label><span className="studentDataSpan">Dues left:    </span><input defaultValue={this.props.studentDataObject.duesLeft} ></input></label></div>
+                <div><label><span className="studentDataSpan">Class Teacher:</span><input defaultValue={this.props.studentDataObject.classTeacher} ></input></label></div>
+                <div><label><span className="studentDataSpan">Monthly Attendance:</span><input defaultValue={this.props.studentDataObject.monthlyAttendance} ></input></label></div>
+                <div><label><span className="studentDataSpan">Test record:</span><input defaultValue={this.props.studentDataObject.testRecord} ></input></label></div>
+                <div><label><span className="studentDataSpan">Overall Status:</span><input defaultValue={this.props.studentDataObject.overallStatus} ></input></label></div>
                 <Button color="warning">Apply Changes</Button>
             </>
         )
