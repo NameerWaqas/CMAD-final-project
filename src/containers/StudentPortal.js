@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Table } from 'reactstrap';
-import { stat } from 'fs';
-
+// import { stat } from 'fs';
+import { Progress } from 'reactstrap';
 class StudentPortal extends React.Component {
     constructor(props) {
         super(props)
@@ -20,7 +20,7 @@ class StudentPortal extends React.Component {
     }
 
     renderFunction = () => {
-        if (this.state.view == "default"){
+        if (this.state.view == "default") {
             return <StudentPortalDefaulView routing={this.routing} />
         }
         else if (this.state.view > 0 && this.state.view <= 10) {
@@ -84,7 +84,7 @@ class StudentPortalDefaulView extends React.Component {
                     return <div ><Button className="studentPortalClassesButton"
                         onClick={() => this.renderStudentsTable(ind + 1)}
                     ><p>Class {param}</p></Button></div>
-                    
+
                 }
                 )}
             </div>
@@ -141,6 +141,13 @@ class StudentData extends React.Component {
     constructor(props) {
         super(props)
     }
+    calculateAverage = () => {
+        let avr = (this.props.StudentObject.english + this.props.StudentObject.urdu + this.props.StudentObject.islamiat +
+            this.props.StudentObject.pst + this.props.StudentObject.maths + this.props.StudentObject.science +
+            this.props.StudentObject.computer) / 7
+        return avr;
+    }
+
     render() {
         return (
             <div id="studentDataParentDiv">
@@ -149,8 +156,65 @@ class StudentData extends React.Component {
                 <div className="studentdataDiv"><label>Dues left: {this.props.StudentObject.duesLeft}</label></div>
                 <div className="studentdataDiv"><label>Class Teacher: {this.props.StudentObject.classTeacher}</label></div>
                 <div className="studentdataDiv"><label>Monthly Attendance: {this.props.StudentObject.monthlyAttendance}</label></div>
-                <div className="studentdataDiv"><label>Test Record: {this.props.StudentObject.testRecord}</label></div>
-                <div className="studentdataDiv"><label>OverallStatus: {this.props.StudentObject.overallStatus}</label></div>
+                <div className="studentdataDiv"><label>Test Record: {this.calculateAverage() >= 75 ? "Good" : this.calculateAverage() >= 65 ? "average" : "bad"}
+                </label></div>
+
+                <fieldset style={{ border: "1px solid rgba(0, 89, 255, 0.767)", display: "inline-block", width: "98%", margin: "1%" }}>
+                    <legend>
+                        Subject wise student progress out of 100%
+                        </legend>
+                    <div style={{ width: "98%", display: "inline-block", margin: "1%" }}>
+                        <div className="text-center">
+                            English:{this.props.StudentObject.english}%
+                        </div>
+                        <Progress color={this.props.StudentObject.english >= 75 ? "success" : this.props.StudentObject.english >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.english}
+                        />
+
+                        <div className="text-center">
+                            Urdu:{this.props.StudentObject.urdu}%
+                        </div>
+                        <Progress color={this.props.StudentObject.urdu >= 75 ? "success" : this.props.StudentObject.urdu >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.urdu} />
+
+                        <div className="text-center">
+                            Islamiat:{this.props.StudentObject.islamiat}%
+                        </div>
+                        <Progress color={this.props.StudentObject.islamiat >= 75 ? "success" : this.props.StudentObject.islamiat >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.islamiat} />
+
+                        <div className="text-center">
+                            Pakistan studies:{this.props.StudentObject.pst}%
+                        </div>
+                        <Progress color={this.props.StudentObject.pst >= 75 ? "success" : this.props.StudentObject.pst >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.pst} />
+
+                        <div className="text-center">
+                            Maths:{this.props.StudentObject.maths}%
+                        </div>
+                        <Progress color={this.props.StudentObject.maths >= 75 ? "success" : this.props.StudentObject.maths >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.maths} />
+
+                        <div className="text-center">
+                            Science:{this.props.StudentObject.science}%
+                        </div>
+                        <Progress color={this.props.StudentObject.science >= 75 ? "success" : this.props.StudentObject.science >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.science} />
+
+                        <div className="text-center">
+                            Computer:{this.props.StudentObject.computer}%
+                        </div>
+                        <Progress color={this.props.StudentObject.computer >= 75 ? "success" : this.props.StudentObject.computer >= 65 ? "warning" : "danger"}
+                            value={this.props.StudentObject.computer} />
+
+                    </div>
+                </fieldset>
+                <div style={{ textAlign: "center", border: "1px solid rgba(0, 89, 255, 0.767)", margin: "1%", borderRadius: "10px" }}>
+                    OverallStatus:<b> {this.calculateAverage() >= 75 ? "success" : this.calculateAverage() >= 65 ? "warning" : "danger"}</b>
+                    <Progress
+                        color={this.calculateAverage() >= 75 ? "success" : this.calculateAverage() >= 65 ? "warning" : "danger"}
+                        style={{ margin: "1%", }} value={this.calculateAverage()} />
+                </div>
 
             </div>
         )
