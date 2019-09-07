@@ -89,9 +89,10 @@ margin-top: 5%;
   width: 75%;
   height: 50px;  
 }
-.studentPortalClassesButton>p{
+.studentPortalClassesButton>p{  
+  text-align: center !important;
   font-size: 150%;
-  font-weight: bold;
+  font-weight: bold;    
 }
 .studentPortalClassesButton:hover{
   transition: 300ms;
@@ -186,5 +187,15 @@ background-color: rgb(204, 204, 204)
     background-size: cover;
     width: 100%;
   }
+  .studentPortalStudentDataQueryFormLabel>span{
+    display: inline-block;
+width:100%;
+  }
+  .studentPortalStudentDataQueryFormLabel>input{
+    width: 70%;
+    border: 1px solid  white;  
+    margin-left: 15%;   
+  }
+
 }
 

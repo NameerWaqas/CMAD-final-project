@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Table } from 'reactstrap';
 // import { stat } from 'fs';
 import { Progress } from 'reactstrap';
+import { Collapse, CardBody, Card } from 'reactstrap';
+
 class StudentPortal extends React.Component {
     constructor(props) {
         super(props)
@@ -83,7 +85,7 @@ class StudentPortalDefaulView extends React.Component {
                 {this.state.arr1.map((param, ind) => {
                     return <div ><Button className="studentPortalClassesButton"
                         onClick={() => this.renderStudentsTable(ind + 1)}
-                    ><p>Class {param}</p></Button></div>
+                    ><p style={{ textAlign: "center" }}>Class {param}</p></Button></div>
 
                 }
                 )}
@@ -140,12 +142,18 @@ class StudentsTable extends React.Component {
 class StudentData extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            collapse: false
+        }
     }
     calculateAverage = () => {
         let avr = (this.props.StudentObject.english + this.props.StudentObject.urdu + this.props.StudentObject.islamiat +
             this.props.StudentObject.pst + this.props.StudentObject.maths + this.props.StudentObject.science +
             this.props.StudentObject.computer) / 7
         return avr;
+    }
+    toggle = () => {
+        this.setState(state => ({ collapse: !state.collapse }));
     }
 
     render() {
@@ -215,7 +223,45 @@ class StudentData extends React.Component {
                         color={this.calculateAverage() >= 75 ? "success" : this.calculateAverage() >= 65 ? "warning" : "danger"}
                         style={{ margin: "1%", }} value={this.calculateAverage()} />
                 </div>
+                <div>
+                    <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Any thing Wrong?</Button>
 
+                    <Collapse isOpen={this.state.collapse} id="studentPortalStudentDataQueryForm">
+                        <scetion  
+                        style={{display:"inline-block",textAlign:"left",width:"96%",margin:"2%"                     
+                        }}>
+                            <form>
+                                <label className="studentPortalStudentDataQueryFormLabel">
+                                    <span>Name:</span><input type="text"
+                                        value={this.props.StudentObject.name} disabled /></label>
+
+                                <label className="studentPortalStudentDataQueryFormLabel">
+                                    <span>Father Name:</span><input type="text"
+                                        value={this.props.StudentObject.fName} disabled /></label>
+
+                                <label className="studentPortalStudentDataQueryFormLabel">
+                                    <span>Applicant's contact #:</span><input type="number"
+                                        min="03000000000" max="03999999999" required /></label>
+
+                                 <label className="studentPortalStudentDataQueryFormLabel">
+                                    <span>Applicant's Email:</span><input type="email"
+                                        required /></label>
+                                <label className="studentPortalStudentDataQueryFormLabel" >
+                                    <span>Applicant's relation with student:</span><br />
+                                    <span >Father</span>  <input type="radio" name="relationWithStudent" required /><br />
+                                    <span>Mother </span> <input type="radio" name="relationWithStudent" required /><br />
+                                    <span>Guardian </span> <input type="radio" name="relationWithStudent" required /><br />
+                                </label>
+                                <label className="studentPortalStudentDataQueryFormLabel">
+                                    <textarea  placeholder="Type your query here:"
+                                      style={{opacity:"0.8",display:"block",width:"98%",margin:"1%"}}  required /></label>
+
+                                <div style={{textAlign:"center"}}><Button type="submit"
+                                style={{width:"50%"}}>submit</Button></div>
+                            </form>
+                        </scetion>
+                    </Collapse>
+                </div>
             </div>
         )
     }

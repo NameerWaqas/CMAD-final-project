@@ -8,6 +8,7 @@ import AboutUs from "./AboutUs";
 import DropDown from "../components/NavBarDropDown/DropDown";
 import { BrowserRouter, Route } from 'react-router-dom';
 
+
 class NavBar extends React.Component {
     constructor() {
         super();
@@ -25,12 +26,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -44,12 +45,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -62,12 +63,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -79,12 +80,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
                 },
                 {
                     name: "Nameer Waqas",
@@ -96,12 +97,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -115,12 +116,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -133,12 +134,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -150,13 +151,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -166,12 +167,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -185,12 +186,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -203,12 +204,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -220,13 +221,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -236,12 +237,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -255,12 +256,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -273,12 +274,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -290,13 +291,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -306,12 +307,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -325,12 +326,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -343,12 +344,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -360,13 +361,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -376,12 +377,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -395,12 +396,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -413,12 +414,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -430,13 +431,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -446,12 +447,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -465,12 +466,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -483,12 +484,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -500,13 +501,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -516,12 +517,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -535,12 +536,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -553,12 +554,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -570,13 +571,13 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
-                },{
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
                     name: "Nameer Waqas",
                     fName: "Abdul Wahab",
                     duesLeft: "None",
@@ -586,12 +587,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 72,
-                    urdu:65,
-                    pst:60,
-                    science:77,
-                    islamiat:70,
-                    computer:90,
-                    maths:85
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
 
 
                 },
@@ -605,12 +606,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 82,
-                    urdu:55,
-                    pst:70,
-                    science:70,
-                    islamiat:80,
-                    computer:60,
-                    maths:80
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
 
                 },
                 {
@@ -623,12 +624,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 52,
-                    urdu:65,
-                    pst:78,
-                    science:90,
-                    islamiat:60,
-                    computer:80,
-                    maths:70
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
                 },
                 {
                     name: "farzan Waqas",
@@ -640,12 +641,12 @@ class NavBar extends React.Component {
                     testRecord: "Good",
                     overallStatus: "Satisfied",
                     english: 65,
-                    urdu:75,
-                    pst:79,
-                    science:60,
-                    islamiat:68,
-                    computer:95,
-                    maths:90
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
                 }
 
             ]
@@ -654,8 +655,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <BrowserRouter>
-
-                <div className="NavBar">
+                <div className="NavBar">                
                     <span className="NavBarSpan">MySchool</span>
                     <section className="NavBarSection">
                         <button><a style={{ color: "white" }} href="/">Home</a></button>
@@ -667,8 +667,9 @@ class NavBar extends React.Component {
                     </section>
                     <section className="DropDown">
                         <DropDown routing={this.routing} />
-                    </section>
+                    </section>                    
                 </div>
+                <div id="gotoTop"/>{/*  for navigation b/w bottom to top */}
                 <div id="MarginedDiv">
                     <Route exact path="/" component={() => <Home />} />
                     <Route path="/studentPortal" component={() => <StudentPortal view={this.state.class1} />} />
@@ -677,7 +678,11 @@ class NavBar extends React.Component {
                     <Route path="/contactUs" component={() => <ContactUs />} />
                     <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1} />} />
                 </div>
+                <footer >
+                    <a href="#gotoTop"><label>^</label></a>
+                </footer>
             </BrowserRouter>
+
         )
     }
 }
