@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Button, Toast, ToastBody, ToastHeader  } from 'reactstrap';
 
 class LoggedIn extends React.Component {
     constructor(props) {
@@ -25,6 +25,10 @@ class LoggedIn extends React.Component {
         if (this.state.view == "default") {
             return <LoggedInPageDefaultView routing={this.routing} />
         }
+        else if (this.state.view == "dashboard") {
+
+            return <Dashboard complains={this.props.complains} routing={this.routing} />
+        }
         else if (this.state.view == "studentsTable") {
             return <LoggedInPageStudentsTable studentsRecord={this.props.studentsRecord}
                 routing={this.routing} />
@@ -39,6 +43,9 @@ class LoggedIn extends React.Component {
         return (
             <>
                 <div className="logoutButtonDiv">
+                    <Button color="danger" onClick={() => this.routing("dashboard")}>
+                        Dashboard
+            </Button>
                     <Button color="danger" onClick={() => this.props.prop("loggedOut")}>
                         Logout
             </Button></div>
@@ -85,7 +92,7 @@ class LoggedInPageStudentsTable extends React.Component {
     render() {
         return (
             <div id="studentPortalTableDiv">
-                <Button style={{ width: "70%", fontSize: "120%"}}>Add student</Button>
+                <Button style={{ width: "70%", fontSize: "120%" }}>Add student</Button>
 
                 <table id="studentPortalTable">
                     <tr>
@@ -149,4 +156,33 @@ class LoggedInPageStudentData extends React.Component {
         )
     }
 }
+
+class Dashboard extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>{
+                this.props.complains.map((obj) => {
+                    return <div className="p-3 bg-primary my-2 rounded">
+                        <Toast>
+                            <ToastHeader>
+                                {obj.name}<br />{obj.fatherName}<br />{obj.applNo}<br />{obj.applemail}<br />{obj.applRel}
+                            </ToastHeader>
+                            <ToastBody>
+                                {obj.query}
+                            </ToastBody>
+                        </Toast>
+                    </div>
+                }
+                )
+            }
+
+            </div>
+        )
+    }
+}
+
 export default LoggedIn;

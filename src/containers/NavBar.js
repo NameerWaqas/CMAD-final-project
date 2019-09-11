@@ -649,7 +649,56 @@ class NavBar extends React.Component {
                     maths: 90
                 }
 
-            ]
+            ],
+            complains:[
+                {
+                    name:"Nameer Waqas",
+                    fatherName:"abdul wahab",
+                    applNo:"01111111111",
+                    applemail:"testemail@testmail.com",
+                    applRel:"father",
+                    query:`
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `
+                },
+                {
+                    name:"Nameer Waqas",
+                    fatherName:"abdul wahab",
+                    applNo:"01111111111",
+                    applemail:"testemail@testmail.com",
+                    applRel:"father",
+                    query:`
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `
+                },   {
+                    name:"Nameer Waqas",
+                    fatherName:"abdul wahab",
+                    applNo:"01111111111",
+                    applemail:"testemail@testmail.com",
+                    applRel:"father",
+                    query:`
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `
+                },   {
+                    name:"Nameer Waqas",
+                    fatherName:"abdul wahab",
+                    applNo:"01111111111",
+                    applemail:"testemail@testmail.com",
+                    applRel:"father",
+                    query:`
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `
+                },   {
+                    name:"Nameer Waqas",
+                    fatherName:"abdul wahab",
+                    applNo:"01111111111",
+                    applemail:"testemail@testmail.com",
+                    applRel:"father",
+                    query:`
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `
+                } 
+            ]                  
         };
     }
     render() {
@@ -676,7 +725,7 @@ class NavBar extends React.Component {
                     <Route path="/events" component={() => <Events />} />
                     <Route path="/aboutUs" component={() => <AboutUs />} />
                     <Route path="/contactUs" component={() => <ContactUs />} />
-                    <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1} />} />
+                    <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1}  complains={this.state.complains}/>} />
                 </div>
                 <footer >
                     <a href="#gotoTop"><label>^</label></a>

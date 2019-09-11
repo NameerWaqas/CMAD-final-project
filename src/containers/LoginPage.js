@@ -17,7 +17,7 @@ class LoginPage extends React.Component {
             return <WhenLoggedOut prop={this.UpdateCheck} name="nameer" />
         }
         else if (this.state.check == "loggedIn") {
-            return <LoggedIn prop={this.UpdateCheck} studentsRecord={this.props.studentsRecord} />
+            return <LoggedIn prop={this.UpdateCheck} studentsRecord={this.props.studentsRecord}  complains={this.props.complains} />
         }
     }
     UpdateCheck = (param) => {
