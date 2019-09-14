@@ -17,8 +17,8 @@ class NavBar extends React.Component {
             view: "home",
             class1: [
                 {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Syed zair",
+                    fName: "Mehdi Rizvi",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -36,8 +36,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Hamza Iqbal",
+                    fName: "Iqbal-ud-din",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -54,8 +54,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Syed Saif",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -71,8 +71,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Ayaz Ahmed",
+                    fName: "Ahmed Malik",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -88,8 +88,8 @@ class NavBar extends React.Component {
                     maths: 90
                 },
                 {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Talha",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -107,8 +107,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Faiq",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -125,8 +125,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Sameer",
+                    fName: "Maqsood",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -142,78 +142,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
-                    duesLeft: "None",
-                    classTeacher: "Sir Nameer Waqas",
-                    classParticipation: "Up to the mark",
-                    monthlyAttendance: "80%",
-                    testRecord: "Good",
-                    overallStatus: "Satisfied",
-                    english: 65,
-                    urdu: 75,
-                    pst: 79,
-                    science: 60,
-                    islamiat: 68,
-                    computer: 95,
-                    maths: 90
-                }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
-                    duesLeft: "None",
-                    classTeacher: "Sir Nameer Waqas",
-                    classParticipation: "Up to the mark",
-                    monthlyAttendance: "80%",
-                    testRecord: "Good",
-                    overallStatus: "Satisfied",
-                    english: 72,
-                    urdu: 65,
-                    pst: 60,
-                    science: 77,
-                    islamiat: 70,
-                    computer: 90,
-                    maths: 85
-
-
-                },
-                {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
-                    duesLeft: "None",
-                    classTeacher: "Sir Nameer Waqas",
-                    classParticipation: "Up to the mark",
-                    monthlyAttendance: "80%",
-                    testRecord: "Good",
-                    overallStatus: "Satisfied",
-                    english: 82,
-                    urdu: 55,
-                    pst: 70,
-                    science: 70,
-                    islamiat: 80,
-                    computer: 60,
-                    maths: 80
-
-                },
-                {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
-                    duesLeft: "None",
-                    classTeacher: "Sir Nameer Waqas",
-                    classParticipation: "Up to the mark",
-                    monthlyAttendance: "80%",
-                    testRecord: "Good",
-                    overallStatus: "Satisfied",
-                    english: 52,
-                    urdu: 65,
-                    pst: 78,
-                    science: 90,
-                    islamiat: 60,
-                    computer: 80,
-                    maths: 70
-                },
-                {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Qasim",
+                    fName: "Ali",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -228,8 +158,8 @@ class NavBar extends React.Component {
                     computer: 95,
                     maths: 90
                 }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Owais",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -247,8 +177,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Hamza",
+                    fName: "Malik",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -265,8 +195,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Gulshad",
+                    fName: "Malik",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -282,8 +212,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Younus",
+                    fName: "Mansoor",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -298,8 +228,8 @@ class NavBar extends React.Component {
                     computer: 95,
                     maths: 90
                 }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Aamir",
+                    fName: "Zia-ud-din",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -317,8 +247,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Talha",
+                    fName: "Maqsood",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -335,8 +265,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Malik",
+                    fName: "Gulshad",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -352,8 +282,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Waqar",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -368,8 +298,8 @@ class NavBar extends React.Component {
                     computer: 95,
                     maths: 90
                 }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Ahmed",
+                    fName: "Ayaz",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -387,8 +317,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Sameer",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -405,8 +335,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Fahed",
+                    fName: "Rashid",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -422,8 +352,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Amaan",
+                    fName: "Hamza",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -438,8 +368,8 @@ class NavBar extends React.Component {
                     computer: 95,
                     maths: 90
                 }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Arham",
+                    fName: "Umer",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -457,8 +387,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Qamar",
+                    fName: "Malik",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -475,8 +405,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Rizwan",
+                    fName: "Ahmed",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -492,8 +422,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Farhan",
+                    fName: "Malik",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -508,8 +438,8 @@ class NavBar extends React.Component {
                     computer: 95,
                     maths: 90
                 }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Sabir",
+                    fName: "Ali",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -527,8 +457,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Wajahat",
+                    fName: "Ayub",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -545,8 +475,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Munaf",
+                    fName: "Malik",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -562,8 +492,8 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Mustafa",
+                    fName: "Fahad",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -578,8 +508,8 @@ class NavBar extends React.Component {
                     computer: 95,
                     maths: 90
                 }, {
-                    name: "Nameer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Saim",
+                    fName: "Rizwan",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -597,8 +527,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Sabeer Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Moiz",
+                    fName: "Hamza",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -615,8 +545,8 @@ class NavBar extends React.Component {
 
                 },
                 {
-                    name: "Faiez Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Moazzam",
+                    fName: "Rizwan",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -632,8 +562,78 @@ class NavBar extends React.Component {
                     maths: 70
                 },
                 {
-                    name: "farzan Waqas",
-                    fName: "Abdul Wahab",
+                    name: "Abdullah",
+                    fName: "Alam",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied",
+                    english: 65,
+                    urdu: 75,
+                    pst: 79,
+                    science: 60,
+                    islamiat: 68,
+                    computer: 95,
+                    maths: 90
+                }, {
+                    name: "Farhan",
+                    fName: "Ali Waris",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied",
+                    english: 72,
+                    urdu: 65,
+                    pst: 60,
+                    science: 77,
+                    islamiat: 70,
+                    computer: 90,
+                    maths: 85
+
+
+                },
+                {
+                    name: "Werasat",
+                    fName: "Malik",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied",
+                    english: 82,
+                    urdu: 55,
+                    pst: 70,
+                    science: 70,
+                    islamiat: 80,
+                    computer: 60,
+                    maths: 80
+
+                },
+                {
+                    name: "Mohsin",
+                    fName: "Ayaz",
+                    duesLeft: "None",
+                    classTeacher: "Sir Nameer Waqas",
+                    classParticipation: "Up to the mark",
+                    monthlyAttendance: "80%",
+                    testRecord: "Good",
+                    overallStatus: "Satisfied",
+                    english: 52,
+                    urdu: 65,
+                    pst: 78,
+                    science: 90,
+                    islamiat: 60,
+                    computer: 80,
+                    maths: 70
+                },
+                {
+                    name: "Haider",
+                    fName: "ali moazzam",
                     duesLeft: "None",
                     classTeacher: "Sir Nameer Waqas",
                     classParticipation: "Up to the mark",
@@ -650,61 +650,73 @@ class NavBar extends React.Component {
                 }
 
             ],
-            complains:[
+            complains: [
                 {
-                    name:"Nameer Waqas",
-                    fatherName:"abdul wahab",
-                    applNo:"01111111111",
-                    applemail:"testemail@testmail.com",
-                    applRel:"father",
-                    query:`
+                    name: "Saif",
+                    fatherName: "Malik",
+                    applNo: "01111111111",
+                    applemail: "testemail@testmail.com",
+                    applRel: "father",
+                    query: `
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     `
                 },
                 {
-                    name:"Nameer Waqas",
-                    fatherName:"abdul wahab",
-                    applNo:"01111111111",
-                    applemail:"testemail@testmail.com",
-                    applRel:"father",
-                    query:`
+                    name: "Saif Ali",
+                    fatherName: "Ali Haider",
+                    applNo: "01111111111",
+                    applemail: "testemail@testmail.com",
+                    applRel: "father",
+                    query: `
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     `
-                },   {
-                    name:"Nameer Waqas",
-                    fatherName:"abdul wahab",
-                    applNo:"01111111111",
-                    applemail:"testemail@testmail.com",
-                    applRel:"father",
-                    query:`
+                }, {
+                    name: "Waqar",
+                    fatherName: "Qamar",
+                    applNo: "01111111111",
+                    applemail: "testemail@testmail.com",
+                    applRel: "father",
+                    query: `
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     `
-                },   {
-                    name:"Nameer Waqas",
-                    fatherName:"abdul wahab",
-                    applNo:"01111111111",
-                    applemail:"testemail@testmail.com",
-                    applRel:"father",
-                    query:`
+                }, {
+                    name: "Rashid",
+                    fatherName: "Abbasi",
+                    applNo: "01111111111",
+                    applemail: "testemail@testmail.com",
+                    applRel: "father",
+                    query: `
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     `
-                },   {
-                    name:"Nameer Waqas",
-                    fatherName:"abdul wahab",
-                    applNo:"01111111111",
-                    applemail:"testemail@testmail.com",
-                    applRel:"father",
-                    query:`
+                }, {
+                    name: "Daniyal",
+                    fatherName: "Ahmed",
+                    applNo: "01111111111",
+                    applemail: "testemail@testmail.com",
+                    applRel: "father",
+                    query: `
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     `
-                } 
-            ]                  
+                }
+            ]
         };
     }
+
+    sortCheck = () => {
+        this.state.class1.sort(function (obj1, obj2) {
+            let nameA = obj1.name.toUpperCase(), nameB = obj2.name.toUpperCase();
+            if (nameA < nameB)
+                return -1;
+            if (nameA > nameB)
+                return 1;
+            return 0;
+        })
+    }
     render() {
+        this.sortCheck();
         return (
             <BrowserRouter>
-                <div className="NavBar">                
+                <div className="NavBar">
                     <span className="NavBarSpan">MySchool</span>
                     <section className="NavBarSection">
                         <button><a style={{ color: "white" }} href="/">Home</a></button>
@@ -713,19 +725,22 @@ class NavBar extends React.Component {
                         <button><a style={{ color: "white" }} href="/aboutUs">About Us</a></button>
                         <button><a style={{ color: "white" }} href="/contactus">Contact Us</a></button>
                         <button><a style={{ color: "white" }} href="/login">Login</a></button>
+                        {
+
+                        }
                     </section>
                     <section className="DropDown">
                         <DropDown routing={this.routing} />
-                    </section>                    
+                    </section>
                 </div>
-                <div id="gotoTop"/>{/*  for navigation b/w bottom to top */}
+                <div id="gotoTop" />{/*  for navigation b/w bottom to top */}
                 <div id="MarginedDiv">
                     <Route exact path="/" component={() => <Home />} />
                     <Route path="/studentPortal" component={() => <StudentPortal view={this.state.class1} />} />
                     <Route path="/events" component={() => <Events />} />
                     <Route path="/aboutUs" component={() => <AboutUs />} />
                     <Route path="/contactUs" component={() => <ContactUs />} />
-                    <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1}  complains={this.state.complains}/>} />
+                    <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1} complains={this.state.complains} />} />
                 </div>
                 <footer >
                     <a href="#gotoTop"><label>^</label></a>

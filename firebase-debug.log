@@ -1,0 +1,34 @@
+[debug] [2019-09-13T04:10:45.474Z] ----------------------------------------------------------------------
+[debug] [2019-09-13T04:10:45.476Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shahana-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-09-13T04:10:45.476Z] CLI Version:   7.3.2
+[debug] [2019-09-13T04:10:45.476Z] Platform:      win32
+[debug] [2019-09-13T04:10:45.476Z] Node Version:  v10.16.3
+[debug] [2019-09-13T04:10:45.477Z] Time:          Thu Sep 12 2019 21:10:45 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-13T04:10:45.477Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-13T04:10:45.485Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-13T04:10:45.485Z] > authorizing via signed-in user
+[debug] [2019-09-13T04:10:45.485Z] [iam] checking project webappbynameer for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-09-13T04:10:45.487Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/webappbynameer:testIamPermissions  
+
+[debug] [2019-09-13T04:10:47.441Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-13T04:10:47.448Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/webappbynameer  
+ 
+[debug] [2019-09-13T04:10:48.541Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'webappbynameer'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-09-13T04:10:48.558Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/webappbynameer/versions  
+
+[debug] [2019-09-13T04:10:50.997Z] <<< HTTP RESPONSE 200
+[info] i  hosting[webappbynameer]: beginning deploy...
+[info] i  hosting[webappbynameer]: found 22 files in build
+[debug] [2019-09-13T04:10:51.042Z] [hosting] hash cache [YnVpbGQ] load error: lines is not defined
+[debug] [2019-09-13T04:10:51.327Z] [hosting] hash cache [YnVpbGQ] stored for 22 files
+[debug] [2019-09-13T04:10:51.327Z] [hosting][hash queue][FINAL]
+[debug] [2019-09-13T04:10:51.328Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/webappbynameer/versions/8f2dab0ff1842eab:populateFiles  
+ <request body omitted>
+[debug] [2019-09-13T04:10:53.455Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-13T04:10:53.466Z] [hosting][populate queue][FINAL]
+[debug] [2019-09-13T04:10:53.467Z] [hosting] uploads queued: 4

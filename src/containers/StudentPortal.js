@@ -143,7 +143,7 @@ class StudentData extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            collapse: false
+
         }
     }
     calculateAverage = () => {
@@ -152,9 +152,7 @@ class StudentData extends React.Component {
             this.props.StudentObject.computer) / 7
         return avr;
     }
-    toggle = () => {
-        this.setState(state => ({ collapse: !state.collapse }));
-    }
+
 
     render() {
         return (
@@ -223,45 +221,115 @@ class StudentData extends React.Component {
                         color={this.calculateAverage() >= 75 ? "success" : this.calculateAverage() >= 65 ? "warning" : "danger"}
                         style={{ margin: "1%", }} value={this.calculateAverage()} />
                 </div>
-                <div>
-                    <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Any thing Wrong?</Button>
+                <CollapseForm  StudentObject={this.props.StudentObject}  />
+            </div>
+        )
+    }
+}
 
-                    <Collapse isOpen={this.state.collapse} id="studentPortalStudentDataQueryForm">
-                        <scetion  
-                        style={{display:"inline-block",textAlign:"left",width:"96%",margin:"2%"                     
+class CollapseForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            collapse: false,
+            name:this.props.StudentObject.name,
+            fname:this.props.StudentObject.fName,
+            applnum:"",
+            applemail:"",
+            applrel:"",
+            query:""
+        }        
+    }
+setEvent=(keyparam,valueparam)=>{
+    switch(keyparam){
+        case "applnum":
+        this.setState(
+            {
+                applnum:valueparam
+            }
+            )
+            break; 
+            case "applemail":
+        this.setState(
+            {
+                applemail:valueparam
+            }
+            )
+            break;
+        
+            case "query":
+        this.setState(
+            {
+                keyparam:valueparam
+            }
+            )
+            break;
+            case "rel":
+        this.setState(
+            {
+                applrel:valueparam
+            }
+            )
+            break;   
+        }
+    }
+
+    toggle = () => {
+        this.setState(state => ({ collapse: !state.collapse }));
+    }
+
+ getValues=()=>{
+
+
+ }
+
+    render() {
+        return (
+            <div>
+                <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Any thing Wrong?</Button>
+
+                <Collapse isOpen={this.state.collapse} id="studentPortalStudentDataQueryForm">
+                    <scetion
+                        style={{
+                            display: "inline-block", textAlign: "left", width: "96%", margin: "2%"
                         }}>
-                            <form>
-                                <label className="studentPortalStudentDataQueryFormLabel">
-                                    <span>Name:</span><input type="text"
-                                        value={this.props.StudentObject.name} disabled /></label>
+                        <form>
+                            <label className="studentPortalStudentDataQueryFormLabel">
+                                <span>Name:</span><input type="text"
+                                    value={this.props.StudentObject.name} disabled /></label>
 
-                                <label className="studentPortalStudentDataQueryFormLabel">
-                                    <span>Father Name:</span><input type="text"
-                                        value={this.props.StudentObject.fName} disabled /></label>
+                            <label className="studentPortalStudentDataQueryFormLabel">
+                                <span>Father Name:</span><input type="text"
+                                    value={this.props.StudentObject.fName} disabled /></label>
 
-                                <label className="studentPortalStudentDataQueryFormLabel">
-                                    <span>Applicant's contact #:</span><input type="number"
-                                        min="03000000000" max="03999999999" required /></label>
+                            <label className="studentPortalStudentDataQueryFormLabel"
+                            onChange={(e)=>this.setEvent("applnum",e.target.value)}>
+                                <span>Applicant's contact #:</span><input type="number"
+                                    min="03000000000" max="03999999999" required /></label>
 
-                                 <label className="studentPortalStudentDataQueryFormLabel">
-                                    <span>Applicant's Email:</span><input type="email"
-                                        required /></label>
-                                <label className="studentPortalStudentDataQueryFormLabel" >
-                                    <span>Applicant's relation with student:</span><br />
-                                    <span >Father</span>  <input type="radio" name="relationWithStudent" required /><br />
-                                    <span>Mother </span> <input type="radio" name="relationWithStudent" required /><br />
-                                    <span>Guardian </span> <input type="radio" name="relationWithStudent" required /><br />
-                                </label>
-                                <label className="studentPortalStudentDataQueryFormLabel">
-                                    <textarea  placeholder="Type your query here:"
-                                      style={{opacity:"0.8",display:"block",width:"98%",margin:"1%"}}  required /></label>
+                            <label className="studentPortalStudentDataQueryFormLabel"
+                            onChange={(e)=>this.setEvent("applemail",e.target.value)}>
+                                <span>Applicant's Email:</span><input type="email"
+                                    required /></label>
+                            <label className="studentPortalStudentDataQueryFormLabel" >
+                                <span>Applicant's relation with student:</span><br />
+                                <span >Father</span>  <input type="radio" name="relationWithStudent" required  value="father"
+                                onClick={()=>this.setEvent("applemail",this.value)}/><br />
+                                <span>Mother </span> <input type="radio" name="relationWithStudent" required value="mother"
+                                onClick={()=>this.setEvent("applemail",this.value)}/><br />
+                                <span>Guardian </span> <input type="radio" name="relationWithStudent" required value="guardian"
+                                onClick={()=>this.setEvent("applemail",this.value)}/><br />
+                            </label>
+                            <label className="studentPortalStudentDataQueryFormLabel">
+                                <textarea placeholder="Type your query here:"
+                                onChange={(e)=>this.setEvent("applemail",e.target.value)}
+                                    style={{ opacity: "0.8", display: "block", width: "98%", margin: "1%" }} required /></label>
 
-                                <div style={{textAlign:"center"}}><Button type="submit"
-                                style={{width:"50%"}}>submit</Button></div>
-                            </form>
-                        </scetion>
-                    </Collapse>
-                </div>
+                            <div style={{ textAlign: "center" }}><Button type="submit"
+                                style={{ width: "50%" }}>submit</Button></div>
+                        </form>
+                    </scetion>
+                </Collapse>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Toast, ToastBody, ToastHeader  } from 'reactstrap';
+import { Button, Toast, ToastBody, ToastHeader } from 'reactstrap';
 
 class LoggedIn extends React.Component {
     constructor(props) {
@@ -141,16 +141,26 @@ class LoggedInPageStudentData extends React.Component {
             }
         }
     }
+
+    
+
     render() {
         return (
             <>
-                <div><label><span className="studentDataSpan">Name:</span><input defaultValue={this.props.studentDataObject.name} ></input></label></div>
-                <div><label><span className="studentDataSpan">Father Name:  </span><input defaultValue={this.props.studentDataObject.fName} ></input></label></div>
-                <div><label><span className="studentDataSpan">Dues left:    </span><input defaultValue={this.props.studentDataObject.duesLeft} ></input></label></div>
-                <div><label><span className="studentDataSpan">Class Teacher:</span><input defaultValue={this.props.studentDataObject.classTeacher} ></input></label></div>
-                <div><label><span className="studentDataSpan">Monthly Attendance:</span><input defaultValue={this.props.studentDataObject.monthlyAttendance} ></input></label></div>
-                <div><label><span className="studentDataSpan">Test record:</span><input defaultValue={this.props.studentDataObject.testRecord} ></input></label></div>
-                <div><label><span className="studentDataSpan">Overall Status:</span><input defaultValue={this.props.studentDataObject.overallStatus} ></input></label></div>
+                <div><label><span className="studentDataSpan">Name:</span>
+                    <input defaultValue={this.props.studentDataObject.name} ></input></label></div>
+                <div><label><span className="studentDataSpan">Father Name:  </span>
+                    <input defaultValue={this.props.studentDataObject.fName} ></input></label></div>
+                <div><label><span className="studentDataSpan">Dues left:    </span>
+                    <input defaultValue={this.props.studentDataObject.duesLeft} ></input></label></div>
+                <div><label><span className="studentDataSpan">Class Teacher:</span>
+                    <input defaultValue={this.props.studentDataObject.classTeacher} ></input></label></div>
+                <div><label><span className="studentDataSpan">Monthly Attendance:</span>
+                    <input defaultValue={this.props.studentDataObject.monthlyAttendance} ></input></label></div>
+                <div><label><span className="studentDataSpan">Test record:</span>
+                    <input defaultValue={this.props.studentDataObject.testRecord} ></input></label></div>
+                <div><label><span className="studentDataSpan">Overall Status:</span>
+                    <input defaultValue={this.props.studentDataObject.overallStatus} ></input></label></div>
                 <Button color="warning">Apply Changes</Button>
             </>
         )
