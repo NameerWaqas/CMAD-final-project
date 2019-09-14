@@ -19,8 +19,8 @@ class LoggedIn extends React.Component {
 
             }
         )
-
     }
+    
     renderFunction = () => {
         if (this.state.view == "default") {
             return <LoggedInPageDefaultView routing={this.routing} />
