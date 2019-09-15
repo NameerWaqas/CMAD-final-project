@@ -6,7 +6,7 @@ import Events from "./Events";
 import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import DropDown from "../components/NavBarDropDown/DropDown";
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
@@ -701,6 +701,42 @@ class NavBar extends React.Component {
             ]
         };
     }
+    deleteStudent = key => {       
+        var newData = this.state.class1.splice(key, 1);
+        this.setState(
+            {
+                class1: this.state.class1                
+
+            }
+        )
+        // alert(this.state.class1)
+    }
+    updateStudentRecord = (param) => {
+
+        this.setState({
+            class1: [...this.state.class1,
+            {
+                name: param.name,
+                fName: param.fName,
+                duesLeft: param.dues,
+                classTeacher: param.teacher,
+                classParticipation: "",
+                monthlyAttendance: param.attendance,
+                testRecord: param.testRecord,
+                overallStatus: "",
+                english: "72",
+                urdu: "60",
+                pst: "75",
+                science: "80",
+                islamiat: "67",
+                computer: "85",
+                maths: "95"
+
+
+            }]
+        }
+        )
+    }
 
     sortCheck = () => {
         this.state.class1.sort(function (obj1, obj2) {
@@ -714,17 +750,18 @@ class NavBar extends React.Component {
     }
     render() {
         this.sortCheck();
+
         return (
             <BrowserRouter>
                 <div className="NavBar">
                     <span className="NavBarSpan">MySchool</span>
                     <section className="NavBarSection">
-                        <button><a style={{ color: "white" }} href="/">Home</a></button>
-                        <button><a style={{ color: "white" }} href="/studentPortal">Student Portal</a></button>
-                        <button><a style={{ color: "white" }} href="/events">Events</a></button>
-                        <button><a style={{ color: "white" }} href="/aboutUs">About Us</a></button>
-                        <button><a style={{ color: "white" }} href="/contactus">Contact Us</a></button>
-                        <button><a style={{ color: "white" }} href="/login">Login</a></button>
+                        <button><Link style={{ color: "white" }} to="/">Home</Link></button>
+                        <button><Link style={{ color: "white" }} to="/studentPortal">Student Portal</Link></button>
+                        <button><Link style={{ color: "white" }} to="/events">Events</Link></button>
+                        <button><Link style={{ color: "white" }} to="/aboutUs">About Us</Link></button>
+                        <button><Link style={{ color: "white" }} to="/contactus">Contact Us</Link></button>
+                        <button><Link style={{ color: "white" }} to="/login">Login</Link></button>
                         {
 
                         }
@@ -740,7 +777,9 @@ class NavBar extends React.Component {
                     <Route path="/events" component={() => <Events />} />
                     <Route path="/aboutUs" component={() => <AboutUs />} />
                     <Route path="/contactUs" component={() => <ContactUs />} />
-                    <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1} complains={this.state.complains} />} />
+                    <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1}
+                        deleteStudentFunc={this.deleteStudent} updateStudentRecordFunc={this.updateStudentRecord}
+                        complains={this.state.complains} />} />
                 </div>
                 <footer >
                     <a href="#gotoTop"><label>^</label></a>

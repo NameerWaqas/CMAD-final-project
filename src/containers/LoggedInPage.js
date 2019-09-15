@@ -8,7 +8,7 @@ class LoggedIn extends React.Component {
             this.state = {
                 view: "default",
                 studentDataObject: "",
-                todos:false
+                todos: false
             }
         }
     }
@@ -21,7 +21,7 @@ class LoggedIn extends React.Component {
             }
         )
     }
-    
+
     renderFunction = () => {
         if (this.state.view == "default") {
             return <LoggedInPageDefaultView routing={this.routing} />
@@ -32,38 +32,37 @@ class LoggedIn extends React.Component {
         }
         else if (this.state.view == "studentsTable") {
             return <LoggedInPageStudentsTable studentsRecord={this.props.studentsRecord}
+                deleteStudentFunc={this.props.deleteStudentFunc} 
                 routing={this.routing} />
         }
         else if (this.state.view == "studentData") {
 
-            return <LoggedInPageStudentData studentDataObject={this.state.studentDataObject} />
+            return <LoggedInPageStudentData studentDataObject={this.state.studentDataObject} updateStudentRecordFunc={this.props.updateStudentRecordFunc} />
         }
 
     }
-    setTodosButton=()=>{
-if(this.state.todos==false)
-{
-    this.routing("todos");
-    this.setState(
-        {todos:true}
-    )
-}
-else
-{
-    this.routing("default");
-    this.setState(
-        {todos:false}
-    )
-}
+    setTodosButton = () => {
+        if (this.state.todos == false) {
+            this.routing("todos");
+            this.setState(
+                { todos: true }
+            )
+        }
+        else {
+            this.routing("default");
+            this.setState(
+                { todos: false }
+            )
+        }
     }
     render() {
         return (
             <>
                 <div className="logoutButtonDiv">
 
-                    <Button style={{position:"absolute",left:"1px",width:"100px"}} color="info" onClick={() => this.setTodosButton()}>
-                      {(this.state.todos===false)?"Todos":"Dashboard"}                    
-            </Button>
+                    <Button style={{ position: "absolute", left: "1px", width: "100px" }} color="info" onClick={() => this.setTodosButton()}>
+                        {(this.state.todos === false) ? "Todos" : "Dashboard"}
+                    </Button>
                     <Button color="danger" onClick={() => this.props.prop("loggedOut")}>
                         Logout
             </Button></div>
@@ -139,6 +138,7 @@ class LoggedInPageStudentsTable extends React.Component {
                             </td>
                             <td className="studentPortalTableCells">
                                 <Button className="LoggedInPageTableButtons"
+                                    onClick={() => this.props.deleteStudentFunc(index)}
                                     color="danger">Delete</Button>
                             </td>
                         </tr>
@@ -155,31 +155,42 @@ class LoggedInPageStudentData extends React.Component {
         super(props)
         {
             this.state = {
-
+              name:this.props.studentDataObject.name, fName:this.props.studentDataObject.fName, dues:this.props.studentDataObject.duesLeft, teacher:this.props.studentDataObject.classTeacher, attendance:this.props.studentDataObject.monthlyAttendance, testRecord:this.props.studentDataObject.testRecord, status:this.props.studentDataObject.overallStatus
             }
         }
     }
+    // updateStudentRecordFunc={this.props.updateStudentRecord}
 
-    
+    updateState = (e) => {
+        this.setState(
+            { [e.target.name] : e.target.value }
+        )
+    }
 
     render() {
         return (
             <>
                 <div><label><span className="studentDataSpan">Name:</span>
-                    <input defaultValue={this.props.studentDataObject.name} ></input></label></div>
+                    <input name="name" onChange={(e)=>this.updateState(e)}
+                     defaultValue={this.props.studentDataObject.name} /></label></div>
                 <div><label><span className="studentDataSpan">Father Name:  </span>
-                    <input defaultValue={this.props.studentDataObject.fName} ></input></label></div>
+                    <input name="fName"  onChange={(e)=>this.updateState(e)}
+                         defaultValue={this.props.studentDataObject.fName} /></label></div>
                 <div><label><span className="studentDataSpan">Dues left:    </span>
-                    <input defaultValue={this.props.studentDataObject.duesLeft} ></input></label></div>
+                    <input name="dues" onChange={(e)=>this.updateState(e)} defaultValue={this.props.studentDataObject.duesLeft} /></label></div>
                 <div><label><span className="studentDataSpan">Class Teacher:</span>
-                    <input defaultValue={this.props.studentDataObject.classTeacher} ></input></label></div>
+                    <input name="teacher" onchange={(e)=>this.updateState(e)}
+                     defaultValue={this.props.studentDataObject.classTeacher} /></label></div>
                 <div><label><span className="studentDataSpan">Monthly Attendance:</span>
-                    <input defaultValue={this.props.studentDataObject.monthlyAttendance} ></input></label></div>
+                    <input name="attendance" onChange={(e)=>this.updateState(e)}
+                     defaultValue={this.props.studentDataObject.monthlyAttendance} /></label></div>
                 <div><label><span className="studentDataSpan">Test record:</span>
-                    <input defaultValue={this.props.studentDataObject.testRecord} ></input></label></div>
+                    <input name="testRecord" onChange={(e)=>this.updateState(e)}
+                     defaultValue={this.props.studentDataObject.testRecord} /></label></div>
                 <div><label><span className="studentDataSpan">Overall Status:</span>
-                    <input defaultValue={this.props.studentDataObject.overallStatus} ></input></label></div>
-                <Button color="warning">Apply Changes</Button>
+                    <input name="status" onChange={(e)=>this.updateState(e)}
+                     defaultValue={this.props.studentDataObject.overallStatus} /></label></div>
+                <Button color="warning" onClick={()=>this.props.updateStudentRecordFunc(this.state)} >Apply Changes</Button>
             </>
         )
     }

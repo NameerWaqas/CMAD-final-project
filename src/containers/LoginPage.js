@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Input, Button } from 'reactstrap';
 import LoggedIn from "./LoggedInPage"
-import {BrowserRouter, Route} from 'react-router-dom';
+// import {BrowserRouter, Route} from 'react-router-dom';
+import firebase from "firebase";
+
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -17,7 +19,9 @@ class LoginPage extends React.Component {
             return <WhenLoggedOut prop={this.UpdateCheck} name="nameer" />
         }
         else if (this.state.check == "loggedIn") {
-            return <LoggedIn prop={this.UpdateCheck} studentsRecord={this.props.studentsRecord}  complains={this.props.complains} />
+            return <LoggedIn prop={this.UpdateCheck}
+            deleteStudentFunc={this.props.deleteStudentFunc}  updateStudentRecordFunc={this.props.updateStudentRecordFunc}
+             studentsRecord={this.props.studentsRecord}  complains={this.props.complains} />
         }
     }
     UpdateCheck = (param) => {
@@ -60,13 +64,16 @@ class WhenLoggedOut extends React.Component {
         }
     }
     Authenticate = () => {
-        if (this.state.id == "nameer" && this.state.password == "waqas") {
-            {
-                this.props.prop("loggedIn");
-            }
-        }
-        else
-            alert("Invalid Email or Password")
+        firebase.auth().signInWithEmailAndPassword(this.state.id,this.state.password).then(res=>{
+            this.props.prop("loggedIn");
+        }).catch(err=>alert(err))
+        // if (this.state.id == "nameer" && this.state.password == "waqas") {
+        //     {
+        //         this.props.prop("loggedIn");
+        //     }
+        // }
+        // else
+        //     alert("Invalid Email or Password")
 
 
     }
