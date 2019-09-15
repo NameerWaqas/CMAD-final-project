@@ -7,7 +7,8 @@ class LoggedIn extends React.Component {
         {
             this.state = {
                 view: "default",
-                studentDataObject: ""
+                studentDataObject: "",
+                todos:false
             }
         }
     }
@@ -25,7 +26,7 @@ class LoggedIn extends React.Component {
         if (this.state.view == "default") {
             return <LoggedInPageDefaultView routing={this.routing} />
         }
-        else if (this.state.view == "dashboard") {
+        else if (this.state.view == "todos") {
 
             return <Dashboard complains={this.props.complains} routing={this.routing} />
         }
@@ -39,12 +40,29 @@ class LoggedIn extends React.Component {
         }
 
     }
+    setTodosButton=()=>{
+if(this.state.todos==false)
+{
+    this.routing("todos");
+    this.setState(
+        {todos:true}
+    )
+}
+else
+{
+    this.routing("default");
+    this.setState(
+        {todos:false}
+    )
+}
+    }
     render() {
         return (
             <>
                 <div className="logoutButtonDiv">
-                    <Button color="danger" onClick={() => this.routing("dashboard")}>
-                        Dashboard
+
+                    <Button style={{position:"absolute",left:"1px",width:"100px"}} color="info" onClick={() => this.setTodosButton()}>
+                      {(this.state.todos===false)?"Todos":"Dashboard"}                    
             </Button>
                     <Button color="danger" onClick={() => this.props.prop("loggedOut")}>
                         Logout
