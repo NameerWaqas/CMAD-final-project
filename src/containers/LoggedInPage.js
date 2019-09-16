@@ -8,15 +8,17 @@ class LoggedIn extends React.Component {
             this.state = {
                 view: "default",
                 studentDataObject: "",
-                todos: false
+                todos: false,
+                indexkey: "0"
             }
         }
     }
-    routing = (param, studentData = "") => {
+    routing = (param, studentData = "", key = "0") => {
         this.setState(
             {
                 view: param,
-                studentDataObject: studentData
+                studentDataObject: studentData,
+                indexkey: key
 
             }
         )
@@ -28,16 +30,19 @@ class LoggedIn extends React.Component {
         }
         else if (this.state.view == "todos") {
 
-            return <Dashboard complains={this.props.complains} routing={this.routing} />
+            return <Dashboard deleteComplainFunc={this.props.deleteComplainFunc} complains={this.props.complains} routing={this.routing} />
         }
         else if (this.state.view == "studentsTable") {
             return <LoggedInPageStudentsTable studentsRecord={this.props.studentsRecord}
-                deleteStudentFunc={this.props.deleteStudentFunc} 
+                deleteStudentFunc={this.props.deleteStudentFunc}
                 routing={this.routing} />
         }
         else if (this.state.view == "studentData") {
-
-            return <LoggedInPageStudentData studentDataObject={this.state.studentDataObject} updateStudentRecordFunc={this.props.updateStudentRecordFunc} />
+            // alert(this.state.indexkey);
+            return <LoggedInPageStudentData studentDataObject={this.state.studentDataObject} updateStudentRecordFunc={this.props.updateStudentRecordFunc} keyValue={this.state.indexkey} />
+        }
+        else if (this.state.view == "addNewStudent") {
+            return <AddStudent updateStudentRecordFunc={this.props.updateStudentRecordFunc} />
         }
 
     }
@@ -60,7 +65,7 @@ class LoggedIn extends React.Component {
             <>
                 <div className="logoutButtonDiv">
 
-                    <Button style={{ position: "absolute", left: "1px", width: "100px" }} color="info" onClick={() => this.setTodosButton()}>
+                    <Button style={{ position: "absolute", left: "1px", width: "100px" }} color="primary" onClick={() => this.setTodosButton()}>
                         {(this.state.todos === false) ? "Todos" : "Dashboard"}
                     </Button>
                     <Button color="danger" onClick={() => this.props.prop("loggedOut")}>
@@ -109,7 +114,7 @@ class LoggedInPageStudentsTable extends React.Component {
     render() {
         return (
             <div id="studentPortalTableDiv">
-                <Button style={{ width: "70%", fontSize: "120%" }}>Add student</Button>
+                <Button style={{ width: "70%", fontSize: "120%" }} onClick={() => this.props.routing("addNewStudent")}>Add student</Button>
 
                 <table id="studentPortalTable">
                     <tr>
@@ -133,7 +138,7 @@ class LoggedInPageStudentsTable extends React.Component {
                             </td>
                             <td className="studentPortalTableCells">
                                 <Button className="LoggedInPageTableButtons" color="warning"
-                                    onClick={() => this.props.routing("studentData", obj)}
+                                    onClick={() => this.props.routing("studentData", obj, index)}
                                 >Edit</Button>
                             </td>
                             <td className="studentPortalTableCells">
@@ -155,7 +160,7 @@ class LoggedInPageStudentData extends React.Component {
         super(props)
         {
             this.state = {
-              name:this.props.studentDataObject.name, fName:this.props.studentDataObject.fName, dues:this.props.studentDataObject.duesLeft, teacher:this.props.studentDataObject.classTeacher, attendance:this.props.studentDataObject.monthlyAttendance, testRecord:this.props.studentDataObject.testRecord, status:this.props.studentDataObject.overallStatus
+                name: this.props.studentDataObject.name, fName: this.props.studentDataObject.fName, dues: this.props.studentDataObject.duesLeft, teacher: this.props.studentDataObject.classTeacher, attendance: this.props.studentDataObject.monthlyAttendance, testRecord: this.props.studentDataObject.testRecord, status: this.props.studentDataObject.overallStatus
             }
         }
     }
@@ -163,37 +168,85 @@ class LoggedInPageStudentData extends React.Component {
 
     updateState = (e) => {
         this.setState(
-            { [e.target.name] : e.target.value }
+            { [e.target.name]: e.target.value }
+        )
+    }
+
+    render() {
+        // alert(this.props.keyValue);
+        return (
+            <>
+                <div><label><span className="studentDataSpan">Name:</span>
+                    <input name="name" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.name} /></label></div>
+                <div><label><span className="studentDataSpan">Father Name:  </span>
+                    <input name="fName" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.fName} /></label></div>
+                <div><label><span className="studentDataSpan">Dues left:    </span>
+                    <input name="dues" onChange={(e) => this.updateState(e)} defaultValue={this.props.studentDataObject.duesLeft} /></label></div>
+                <div><label><span className="studentDataSpan">Class Teacher:</span>
+                    <input name="teacher" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.classTeacher} /></label></div>
+                <div><label><span className="studentDataSpan">Monthly Attendance:</span>
+                    <input name="attendance" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.monthlyAttendance} /></label></div>
+                <div><label><span className="studentDataSpan">Test record:</span>
+                    <input name="testRecord" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.testRecord} /></label></div>
+                <div><label><span className="studentDataSpan">Overall Status:</span>
+                    <input name="status" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.overallStatus} /></label></div>
+                <Button color="warning" onClick={() => this.props.updateStudentRecordFunc(this.state, this.props.keyValue)} >Apply Changes</Button>
+            </>
+        )
+    }
+}
+
+class AddStudent extends React.Component {
+    constructor(props) {
+        super(props)
+        {
+            this.state = {
+                name: "", fName: "", dues: "", teacher: "", attendance: "", testRecord: "", status: ""
+            }
+        }
+    }
+    updateState = (e) => {
+        this.setState(
+            { [e.target.name]: e.target.value }
         )
     }
 
     render() {
         return (
-            <>
+            <form>
                 <div><label><span className="studentDataSpan">Name:</span>
-                    <input name="name" onChange={(e)=>this.updateState(e)}
-                     defaultValue={this.props.studentDataObject.name} /></label></div>
+                    <input name="name" onChange={(e) => this.updateState(e)} type="text"
+                     required/></label></div>
                 <div><label><span className="studentDataSpan">Father Name:  </span>
-                    <input name="fName"  onChange={(e)=>this.updateState(e)}
-                         defaultValue={this.props.studentDataObject.fName} /></label></div>
+                    <input name="fName" onChange={(e) => this.updateState(e)} type="text"
+                     required/></label></div>
                 <div><label><span className="studentDataSpan">Dues left:    </span>
-                    <input name="dues" onChange={(e)=>this.updateState(e)} defaultValue={this.props.studentDataObject.duesLeft} /></label></div>
+                    <input name="dues" onChange={(e) => this.updateState(e)} type="text"  
+                    required/></label></div>
                 <div><label><span className="studentDataSpan">Class Teacher:</span>
-                    <input name="teacher" onchange={(e)=>this.updateState(e)}
-                     defaultValue={this.props.studentDataObject.classTeacher} /></label></div>
+                    <input name="teacher" onChange={(e) => this.updateState(e)} type="text"
+                   required /></label></div>
                 <div><label><span className="studentDataSpan">Monthly Attendance:</span>
-                    <input name="attendance" onChange={(e)=>this.updateState(e)}
-                     defaultValue={this.props.studentDataObject.monthlyAttendance} /></label></div>
+                    <input name="attendance" onChange={(e) => this.updateState(e)} type="text"
+                     required/></label></div>
                 <div><label><span className="studentDataSpan">Test record:</span>
-                    <input name="testRecord" onChange={(e)=>this.updateState(e)}
-                     defaultValue={this.props.studentDataObject.testRecord} /></label></div>
+                    <input name="testRecord" onChange={(e) => this.updateState(e)} type="text"
+                     required/></label></div>
                 <div><label><span className="studentDataSpan">Overall Status:</span>
-                    <input name="status" onChange={(e)=>this.updateState(e)}
-                     defaultValue={this.props.studentDataObject.overallStatus} /></label></div>
-                <Button color="warning" onClick={()=>this.props.updateStudentRecordFunc(this.state)} >Apply Changes</Button>
-            </>
+                    <input name="status" onChange={(e) => this.updateState(e)} type="text"
+                     required/></label></div>
+                <Button type="submit" color="warning" onClick={() => this.props.updateStudentRecordFunc(this.state)} >Apply Changes</Button>
+            </form>
         )
     }
+
+
 }
 
 class Dashboard extends React.Component {
@@ -204,12 +257,14 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div>{
-                this.props.complains.map((obj) => {
+                this.props.complains.map((obj, index) => {
                     return <div className="p-3 bg-primary my-2 rounded">
                         <Toast>
-                            <ToastHeader>
+                            <div id="toastHeader">
+                                <div><Button style={{ border: "hidden", backgroundColor: "inherit", color: "black" }}
+                                    onClick={() => this.props.deleteComplainFunc(index)}>x</Button></div>
                                 {obj.name}<br />{obj.fatherName}<br />{obj.applNo}<br />{obj.applemail}<br />{obj.applRel}
-                            </ToastHeader>
+                            </div>
                             <ToastBody>
                                 {obj.query}
                             </ToastBody>

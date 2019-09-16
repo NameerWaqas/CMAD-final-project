@@ -157,4 +157,19 @@ width:28%;
     background-image: url('./images/studentPortalStudentDataimg.jpg');
     background-size: cover;
   }
+
+  #toastHeader{
+    width: 100% !important;
+    display: block;
+    border: 1px solid #0277bd  ;
+    border-radius: 4px;
+    background-color: yellow;
+    text-align: left;
+    padding-left: 1%;
+  }
+  #toastHeader>div{
+    text-align: right
+  }
+  
+  
   

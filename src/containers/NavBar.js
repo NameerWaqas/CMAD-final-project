@@ -701,21 +701,57 @@ class NavBar extends React.Component {
             ]
         };
     }
-    deleteStudent = key => {       
+    deleteStudent = key => {
         var newData = this.state.class1.splice(key, 1);
         this.setState(
             {
-                class1: this.state.class1                
+                class1: this.state.class1
 
             }
         )
         // alert(this.state.class1)
     }
-    updateStudentRecord = (param) => {
-
-        this.setState({
-            class1: [...this.state.class1,
+    deleteComplain = key => {
+        var newData = this.state.complains.splice(key, 1);
+        this.setState(
             {
+                complains: this.state.complains
+
+            }
+        )
+        // alert(this.state.class1)
+    }
+    updateStudentRecord = (param, key = "undefined") => {
+        // alert(key);
+        if (key == "undefined") {
+            this.setState({
+
+                class1: [...this.state.class1,
+                {
+                    name: param.name,
+                    fName: param.fName,
+                    duesLeft: param.dues,
+                    classTeacher: param.teacher,
+                    classParticipation: "",
+                    monthlyAttendance: param.attendance,
+                    testRecord: param.testRecord,
+                    overallStatus: "",
+                    english: "72",
+                    urdu: "60",
+                    pst: "75",
+                    science: "80",
+                    islamiat: "67",
+                    computer: "85",
+                    maths: "95"
+
+
+                }]
+            }
+            )
+        }
+        else {
+            console.log(param)
+            this.state.class1[key] = {
                 name: param.name,
                 fName: param.fName,
                 duesLeft: param.dues,
@@ -731,11 +767,13 @@ class NavBar extends React.Component {
                 islamiat: "67",
                 computer: "85",
                 maths: "95"
-
-
-            }]
+            }
+            this.setState(
+                {
+                    class1: this.state.class1
+                }
+            )
         }
-        )
     }
 
     sortCheck = () => {
@@ -778,7 +816,7 @@ class NavBar extends React.Component {
                     <Route path="/aboutUs" component={() => <AboutUs />} />
                     <Route path="/contactUs" component={() => <ContactUs />} />
                     <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1}
-                        deleteStudentFunc={this.deleteStudent} updateStudentRecordFunc={this.updateStudentRecord}
+                        deleteStudentFunc={this.deleteStudent} deleteComplainFunc={this.deleteComplain} updateStudentRecordFunc={this.updateStudentRecord}
                         complains={this.state.complains} />} />
                 </div>
                 <footer >

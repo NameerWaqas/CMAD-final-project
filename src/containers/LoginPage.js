@@ -21,7 +21,7 @@ class LoginPage extends React.Component {
         else if (this.state.check == "loggedIn") {
             return <LoggedIn prop={this.UpdateCheck}
             deleteStudentFunc={this.props.deleteStudentFunc}  updateStudentRecordFunc={this.props.updateStudentRecordFunc}
-             studentsRecord={this.props.studentsRecord}  complains={this.props.complains} />
+             studentsRecord={this.props.studentsRecord}  complains={this.props.complains} deleteComplainFunc={this.props.deleteComplainFunc} />
         }
     }
     UpdateCheck = (param) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {  Link } from 'react-router-dom';
 
 export default class DorpDown extends React.Component {
   constructor(props) {
@@ -24,13 +25,13 @@ export default class DorpDown extends React.Component {
           Tap me!
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem ><a className="DropDownButtons" href="/" id="q">Home</a></DropdownItem>
-          <DropdownItem><a className="DropDownButtons" href="/studentPortal">Student Portal</a></DropdownItem>
-          <DropdownItem ><a className="DropDownButtons" href="/events">Events</a></DropdownItem>
-          <DropdownItem><a className="DropDownButtons" href="/aboutUs">About Us</a></DropdownItem>
-          <DropdownItem><a className="DropDownButtons" href="/contactus">Contact Us</a></DropdownItem>
+          <DropdownItem ><Link className="DropDownButtons" to="/" id="q">Home</Link></DropdownItem>
+          <DropdownItem><Link className="DropDownButtons" to="/studentPortal">Student Portal</Link></DropdownItem>
+          <DropdownItem ><Link className="DropDownButtons" to="/events">Events</Link></DropdownItem>
+          <DropdownItem><Link className="DropDownButtons" to="/aboutUs">About Us</Link></DropdownItem>
+          <DropdownItem><Link className="DropDownButtons" to="/contactus">Contact Us</Link></DropdownItem>
           <DropdownItem divider />
-          <DropdownItem><a  className="DropDownButtons" href="/login">Login</a></DropdownItem>
+          <DropdownItem><Link  className="DropDownButtons" to="/login">Login</Link></DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );
