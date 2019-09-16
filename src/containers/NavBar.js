@@ -7,6 +7,7 @@ import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import DropDown from "../components/NavBarDropDown/DropDown";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import firebase from "firebase";
 
 
 class NavBar extends React.Component {
@@ -15,6 +16,7 @@ class NavBar extends React.Component {
 
         this.state = {
             view: "home",
+            allData: [],
             class1: [
                 {
                     name: "Syed zair",
@@ -699,6 +701,7 @@ class NavBar extends React.Component {
                     `
                 }
             ]
+
         };
     }
     deleteStudent = key => {
@@ -786,9 +789,19 @@ class NavBar extends React.Component {
             return 0;
         })
     }
+
+    readFromFirebase = () => {
+        firebase.database().ref('state').once('/value/').then(snapshot => {
+            this.setState({
+                allData: snapshot.val().name
+            },console.log(this.state.name,'Data'))
+        })
+
+    }
+
     render() {
         this.sortCheck();
-
+        // this.readFromFirebase();
         return (
             <BrowserRouter>
                 <div className="NavBar">
