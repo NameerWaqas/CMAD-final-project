@@ -938,7 +938,7 @@ class NavBar extends React.Component {
                     <Route path="/diary" component={() => <Diary diary={this.state.diary}/>} />
                     <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1}
                         deleteStudentFunc={this.deleteStudent} deleteComplainFunc={this.deleteComplain} updateStudentRecordFunc={this.updateStudentRecord}
-                        complains={this.state.complains} />} />
+                        complains={this.state.complains} diary={this.state.diary} />} />
 
                 </div>
                 <footer >

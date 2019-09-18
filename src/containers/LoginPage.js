@@ -22,10 +22,15 @@ class LoginPage extends React.Component {
             return <LoggedIn prop={this.UpdateCheck}
             deleteStudentFunc={this.props.deleteStudentFunc}  updateStudentRecordFunc={this.props.updateStudentRecordFunc}
              studentsRecord={this.props.studentsRecord}  complains={this.props.complains} deleteComplainFunc={this.props.deleteComplainFunc}
-             />
+             diary={this.props.diary} />
         }
     }
     UpdateCheck = (param) => {
+        if(param=="loggedOut"){
+          firebase.auth().signOut().then(
+              console.log("loggedOut")
+          )
+        }
         this.setState(
             {
                 check: param
@@ -34,8 +39,20 @@ class LoginPage extends React.Component {
     }
 
     // Get the Auth service for the default app
-
+    userStatusTracker=()=>{
+        firebase.auth().onAuthStateChanged(user=>{
+            if(user)
+            {
+                this.UpdateCheck("loggedIn");
+            }
+        })
+    }
+    componentWillMount=()=>{
+        this.userStatusTracker();
+    }
     render() {
+       
+
         return (
             
             this.LoginPageRouting()
@@ -70,6 +87,7 @@ class WhenLoggedOut extends React.Component {
         }).catch(err=>alert(err))    
 
     }
+    
     render() {
         return (
             <div id="LoginPageDiv">

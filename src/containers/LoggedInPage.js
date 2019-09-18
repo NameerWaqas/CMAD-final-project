@@ -46,7 +46,7 @@ class LoggedIn extends React.Component {
             return <AddStudent updateStudentRecordFunc={this.props.updateStudentRecordFunc} />
         }
         else if (this.state.view == "diary") {
-            return <Diary/>
+            return <Diary diary={this.props.diary} />
         }
 
     }
@@ -56,15 +56,15 @@ class LoggedIn extends React.Component {
             // this.setState(
             //     { todos: true }
             // )
-            this.state.todos=true;
-            this.state.diary=false;
+            this.state.todos = true;
+            this.state.diary = false;
         }
         else {
             this.routing("default");
             // this.setState(
             //     { todos: false }
             // )
-            this.state.todos=false;
+            this.state.todos = false;
         }
     }
     setDiaryButton = () => {
@@ -73,15 +73,15 @@ class LoggedIn extends React.Component {
             // this.setState(
             //     { diary: true }
             // )
-            this.state.diary=true;
-            this.state.todos=false;
+            this.state.diary = true;
+            this.state.todos = false;
         }
         else {
             this.routing("default");
             // this.setState(
             //     { diary: false }
             // )
-            this.state.diary=false;
+            this.state.diary = false;
         }
     }
     render() {
@@ -309,16 +309,70 @@ class Diary extends React.Component {
     constructor(props) {
         super(props)
         {
-
+            this.state = {
+                route: "default",
+                diaryData: ""
+            }
         }
+    }
+    diaryComponentRouting = (param, obj) => {
+        this.setState({
+            route: param,
+            diaryData: obj
+        })
     }
 
     render() {
         return (
-            <>
-                <h1>Coming soon!</h1>
+            <div>
+                {
+                    (this.state.route == "default") ? <DiaryComponentDefaultView diary={this.props.diary} diaryComponentRouting={this.diaryComponentRouting} />
+                        : <DiaryData diaryData={this.state.diaryData} />
+                }
+            </div>
+        )
+    }
+}
+class DiaryComponentDefaultView extends React.Component {
+    constructor(props) {
+        super(props)
 
-            </>
+    }
+
+    render() {
+        return (
+            <div className="studentPortalDefaultView">
+                {
+                    this.props.diary.map((obj, ind) => {
+                        return <div >
+                            <Button className="studentPortalClassesButton"
+                                onClick={() => this.props.diaryComponentRouting("diaryData", obj)}>
+                                <p>Diary Class {ind + 1}</p>
+                            </Button>
+                        </div>
+                    })
+                }
+            </div>
+        )
+    }
+}
+class DiaryData extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <div style={{minHeight:"100vh"}}>
+                {console.log(this.props.diaryData)}
+                <span>English</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.english}/></div>
+                <span>Urdu</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.urdu}/></div>
+                <span>Islamiat</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.islamiat}/></div>
+                <span>Pakistan St.</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.pst}/></div>
+                <span>Science</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.science}/></div>
+                <span>Computer</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.computer}/></div>
+                <span>Maths</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.maths}/></div>
+                <div><Button color="warning">Update Diary</Button></div>
+            </div>
         )
     }
 }
