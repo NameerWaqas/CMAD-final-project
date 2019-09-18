@@ -9,7 +9,8 @@ class LoggedIn extends React.Component {
                 view: "default",
                 studentDataObject: "",
                 todos: false,
-                indexkey: "0"
+                indexkey: "0",
+                diary: false
             }
         }
     }
@@ -44,20 +45,43 @@ class LoggedIn extends React.Component {
         else if (this.state.view == "addNewStudent") {
             return <AddStudent updateStudentRecordFunc={this.props.updateStudentRecordFunc} />
         }
+        else if (this.state.view == "diary") {
+            return <Diary/>
+        }
 
     }
     setTodosButton = () => {
         if (this.state.todos == false) {
             this.routing("todos");
-            this.setState(
-                { todos: true }
-            )
+            // this.setState(
+            //     { todos: true }
+            // )
+            this.state.todos=true;
+            this.state.diary=false;
         }
         else {
             this.routing("default");
-            this.setState(
-                { todos: false }
-            )
+            // this.setState(
+            //     { todos: false }
+            // )
+            this.state.todos=false;
+        }
+    }
+    setDiaryButton = () => {
+        if (this.state.diary == false) {
+            this.routing("diary");
+            // this.setState(
+            //     { diary: true }
+            // )
+            this.state.diary=true;
+            this.state.todos=false;
+        }
+        else {
+            this.routing("default");
+            // this.setState(
+            //     { diary: false }
+            // )
+            this.state.diary=false;
         }
     }
     render() {
@@ -65,9 +89,12 @@ class LoggedIn extends React.Component {
             <>
                 <div className="logoutButtonDiv">
 
-                    <Button style={{ position: "absolute", left: "1px", width: "100px" }} color="primary" onClick={() => this.setTodosButton()}>
+                    <Button style={{ position: "absolute", left: "1px", width: "120px" }} color="primary" onClick={() => this.setTodosButton()}>
                         {(this.state.todos === false) ? "Todos" : "Dashboard"}
                     </Button>
+                    <Button style={{ position: "absolute", left: "125px", width: "120px" }} onClick={() => this.setDiaryButton()}
+                    >{(this.state.diary === false) ? "UpdateDiary" : "Dashboard"}</Button>
+
                     <Button color="danger" onClick={() => this.props.prop("loggedOut")}>
                         Logout
             </Button></div>
@@ -222,25 +249,25 @@ class AddStudent extends React.Component {
             <form>
                 <div><label><span className="studentDataSpan">Name:</span>
                     <input name="name" onChange={(e) => this.updateState(e)} type="text"
-                     required/></label></div>
+                        required /></label></div>
                 <div><label><span className="studentDataSpan">Father Name:  </span>
                     <input name="fName" onChange={(e) => this.updateState(e)} type="text"
-                     required/></label></div>
+                        required /></label></div>
                 <div><label><span className="studentDataSpan">Dues left:    </span>
-                    <input name="dues" onChange={(e) => this.updateState(e)} type="text"  
-                    required/></label></div>
+                    <input name="dues" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
                 <div><label><span className="studentDataSpan">Class Teacher:</span>
                     <input name="teacher" onChange={(e) => this.updateState(e)} type="text"
-                   required /></label></div>
+                        required /></label></div>
                 <div><label><span className="studentDataSpan">Monthly Attendance:</span>
                     <input name="attendance" onChange={(e) => this.updateState(e)} type="text"
-                     required/></label></div>
+                        required /></label></div>
                 <div><label><span className="studentDataSpan">Test record:</span>
                     <input name="testRecord" onChange={(e) => this.updateState(e)} type="text"
-                     required/></label></div>
+                        required /></label></div>
                 <div><label><span className="studentDataSpan">Overall Status:</span>
                     <input name="status" onChange={(e) => this.updateState(e)} type="text"
-                     required/></label></div>
+                        required /></label></div>
                 <Button type="submit" color="warning" onClick={() => this.props.updateStudentRecordFunc(this.state)} >Apply Changes</Button>
             </form>
         )
@@ -278,5 +305,21 @@ class Dashboard extends React.Component {
         )
     }
 }
+class Diary extends React.Component {
+    constructor(props) {
+        super(props)
+        {
 
+        }
+    }
+
+    render() {
+        return (
+            <>
+                <h1>Coming soon!</h1>
+
+            </>
+        )
+    }
+}
 export default LoggedIn;

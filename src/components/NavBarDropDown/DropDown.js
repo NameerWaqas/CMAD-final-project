@@ -30,6 +30,7 @@ export default class DorpDown extends React.Component {
           <DropdownItem ><Link className="DropDownButtons" to="/events">Events</Link></DropdownItem>
           <DropdownItem><Link className="DropDownButtons" to="/aboutUs">About Us</Link></DropdownItem>
           <DropdownItem><Link className="DropDownButtons" to="/contactus">Contact Us</Link></DropdownItem>
+          <DropdownItem><Link className="DropDownButtons" to="/diary">Diary</Link></DropdownItem>
           <DropdownItem divider />
           <DropdownItem><Link  className="DropDownButtons" to="/login">Login</Link></DropdownItem>
         </DropdownMenu>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import NavBar from './containers/NavBar'
+import NavBar from './containers/NavBar(main)'
 import firebase from "firebase";
 
 const firebaseConfig = {

@@ -19,6 +19,7 @@ height: 400px;
   margin-top: 2px;
 width: 90%;
 text-align: right;
+
 }
 .NavBarSection>button{
   margin-left: 1%;
@@ -170,6 +171,9 @@ width:28%;
   #toastHeader>div{
     text-align: right
   }
-  
+  #diaryComponentDiv{
+    width:98%;
+    margin: 1%;
+  }
   
   

@@ -53,7 +53,7 @@ class StudentPortal extends React.Component {
         }
         else if (this.state.view == "studentData") {
             // console.log(this.state.studentData);
-            return <StudentData StudentObject={this.state.studentData} />
+            return <StudentData StudentObject={this.state.studentData}  updateComplainsFunc={this.props.updateComplainsFunc} />
         }
     }
     render() {
@@ -221,7 +221,7 @@ class StudentData extends React.Component {
                         color={this.calculateAverage() >= 75 ? "success" : this.calculateAverage() >= 65 ? "warning" : "danger"}
                         style={{ margin: "1%", }} value={this.calculateAverage()} />
                 </div>
-                <CollapseForm  StudentObject={this.props.StudentObject}  />
+                <CollapseForm  StudentObject={this.props.StudentObject}  updateComplainsFunc={this.props.updateComplainsFunc}  />
             </div>
         )
     }
@@ -230,7 +230,7 @@ class StudentData extends React.Component {
 class CollapseForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {            
             collapse: false,
             name:this.props.StudentObject.name,
             fname:this.props.StudentObject.fName,
@@ -238,8 +238,13 @@ class CollapseForm extends React.Component {
             applemail:"",
             applrel:"",
             query:""
+            
         }        
     }
+
+   
+
+
 setEvent=(keyparam,valueparam)=>{
     switch(keyparam){
         case "applnum":
@@ -295,11 +300,11 @@ setEvent=(keyparam,valueparam)=>{
                         }}>
                         <form>
                             <label className="studentPortalStudentDataQueryFormLabel">
-                                <span>Name:</span><input type="text"
+                                <span>Name:</span><input type="text" name="name"
                                     value={this.props.StudentObject.name} disabled /></label>
 
                             <label className="studentPortalStudentDataQueryFormLabel">
-                                <span>Father Name:</span><input type="text"
+                                <span>Father Name:</span><input type="text" name="fName"
                                     value={this.props.StudentObject.fName} disabled /></label>
 
                             <label className="studentPortalStudentDataQueryFormLabel"
@@ -313,19 +318,19 @@ setEvent=(keyparam,valueparam)=>{
                                     required /></label>
                             <label className="studentPortalStudentDataQueryFormLabel" >
                                 <span>Applicant's relation with student:</span><br />
-                                <span >Father</span>  <input type="radio" name="relationWithStudent" required  value="father"
-                                onClick={()=>this.setEvent("applemail",this.value)}/><br />
-                                <span>Mother </span> <input type="radio" name="relationWithStudent" required value="mother"
-                                onClick={()=>this.setEvent("applemail",this.value)}/><br />
-                                <span>Guardian </span> <input type="radio" name="relationWithStudent" required value="guardian"
-                                onClick={()=>this.setEvent("applemail",this.value)}/><br />
+                                <span >Father</span>  <input type="radio" name="Father" required  value="father"
+                                onClick={(e)=>this.setEvent("applemail",e.target.name)}/><br />
+                                <span>Mother </span> <input type="radio" name="Mother" required value="mother"
+                                onClick={(e)=>this.setEvent("applemail",e.target.name)}/><br />
+                                <span>Guardian </span> <input type="radio" name="Guardian" required value="guardian"
+                                onClick={(e)=>this.setEvent("applemail",e.target.name)}/><br />
                             </label>
                             <label className="studentPortalStudentDataQueryFormLabel">
                                 <textarea placeholder="Type your query here:"
                                 onChange={(e)=>this.setEvent("applemail",e.target.value)}
                                     style={{ opacity: "0.8", display: "block", width: "98%", margin: "1%" }} required /></label>
 
-                            <div style={{ textAlign: "center" }}><Button type="submit"
+                            <div style={{ textAlign: "center" }}><Button type="submit" onClick={()=> this.props.updateComplainsFunc(this.state)}
                                 style={{ width: "50%" }}>submit</Button></div>
                         </form>
                     </scetion>

@@ -21,7 +21,8 @@ class LoginPage extends React.Component {
         else if (this.state.check == "loggedIn") {
             return <LoggedIn prop={this.UpdateCheck}
             deleteStudentFunc={this.props.deleteStudentFunc}  updateStudentRecordFunc={this.props.updateStudentRecordFunc}
-             studentsRecord={this.props.studentsRecord}  complains={this.props.complains} deleteComplainFunc={this.props.deleteComplainFunc} />
+             studentsRecord={this.props.studentsRecord}  complains={this.props.complains} deleteComplainFunc={this.props.deleteComplainFunc}
+             />
         }
     }
     UpdateCheck = (param) => {
@@ -66,15 +67,7 @@ class WhenLoggedOut extends React.Component {
     Authenticate = () => {
         firebase.auth().signInWithEmailAndPassword(this.state.id,this.state.password).then(res=>{
             this.props.prop("loggedIn");
-        }).catch(err=>alert(err))
-        // if (this.state.id == "nameer" && this.state.password == "waqas") {
-        //     {
-        //         this.props.prop("loggedIn");
-        //     }
-        // }
-        // else
-        //     alert("Invalid Email or Password")
-
+        }).catch(err=>alert(err))    
 
     }
     render() {
@@ -82,13 +75,13 @@ class WhenLoggedOut extends React.Component {
             <div id="LoginPageDiv">
                 <div id="LoginPageSection">
                     <h2 >Login as Administrator</h2>
-                    {/* <label for="LoginPageEmail" ><p>Email:</p></label>                         */}
+                               
                     <Input type="email"
-                        id="LoginPageEmail" placeholder="Enter Email=> nameer"
+                        id="LoginPageEmail" placeholder="Enter Email=> admin@auth.com"
                         onChange={(param) => this.getParam(param.target.value, "id")} />
-                    {/* <label for="LoginPagePassword" ><p>Email:</p></label>                         */}
+                                  
                     <Input type="password"
-                        id="LoginPagePassword" placeholder="Enter password=> waqas"
+                        id="LoginPagePassword" placeholder="Enter password=> nameerwaqas"
                         onChange={(param) => this.getParam(param.target.value, "password")} />
                     <Button onClick={() => this.Authenticate()}>Submit</Button>
                 </div>
