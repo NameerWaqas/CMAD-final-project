@@ -688,7 +688,8 @@ class NavBar extends React.Component {
                     query: `
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     `
-                }, {
+                },
+                {
                     name: "Daniyal",
                     fatherName: "Ahmed",
                     applNo: "01111111111",
@@ -700,7 +701,7 @@ class NavBar extends React.Component {
                 }
             ],
             diary: [
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -709,7 +710,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -718,7 +719,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -727,7 +728,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -736,7 +737,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -745,7 +746,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -754,7 +755,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -763,7 +764,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -772,7 +773,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -781,7 +782,7 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-                 {
+                {
                     english: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     urdu: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     islamiat: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -790,11 +791,82 @@ class NavBar extends React.Component {
                     computer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     maths: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
-              
+
+            ],
+            forms: [
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                },
+                {
+                    studentName: "Nameer Waqas",
+                    fName: "Abdul Wahab",
+                    number: "03122741771    ",
+                    email: "nameerwaqas@gmail.com",
+                    relation: "father",
+                    admissionClass: "15"
+                }
+
             ]
         };
-    }
 
+    }
+    componentDidMount = () => {
+        this.readFromFirebase();
+
+    }
 
     deleteStudent = key => {
         var newData = this.state.class1.splice(key, 1);
@@ -802,9 +874,10 @@ class NavBar extends React.Component {
             {
                 class1: this.state.class1
 
-            }
+            },
+            this.writeInFirebase()
         )
-        // alert(this.state.class1)
+
     }
     deleteComplain = key => {
         var newData = this.state.complains.splice(key, 1);
@@ -812,12 +885,13 @@ class NavBar extends React.Component {
             {
                 complains: this.state.complains
 
-            }
+            },
+            this.writeInFirebase()
         )
 
     }
     updateStudentRecord = (param, key = "undefined") => {
-        // alert(key);
+
         if (key == "undefined") {
             this.setState({
 
@@ -831,21 +905,23 @@ class NavBar extends React.Component {
                     monthlyAttendance: param.attendance,
                     testRecord: param.testRecord,
                     overallStatus: "",
-                    english: "72",
-                    urdu: "60",
-                    pst: "75",
-                    science: "80",
-                    islamiat: "67",
-                    computer: "85",
-                    maths: "95"
+                    english: param.english,
+                    urdu: param.urdu,
+                    pst: param.pst,
+                    science: param.science,
+                    islamiat: param.islamiat,
+                    computer: param.computer,
+                    maths: param.maths
 
 
                 }]
-            }
+
+            },
+                this.writeInFirebase()
             )
         }
         else {
-            console.log(param)
+
             this.state.class1[key] = {
                 name: param.name,
                 fName: param.fName,
@@ -855,18 +931,19 @@ class NavBar extends React.Component {
                 monthlyAttendance: param.attendance,
                 testRecord: param.testRecord,
                 overallStatus: "",
-                english: "72",
-                urdu: "60",
-                pst: "75",
-                science: "80",
-                islamiat: "67",
-                computer: "85",
-                maths: "95"
+                english: param.english,
+                urdu: param.urdu,
+                pst: param.pst,
+                science: param.science,
+                islamiat: param.islamiat,
+                computer: param.computer,
+                maths: param.maths
             }
             this.setState(
                 {
                     class1: this.state.class1
-                }
+                },
+                this.writeInFirebase()
             )
         }
     }
@@ -883,10 +960,17 @@ class NavBar extends React.Component {
     }
 
     readFromFirebase = () => {
-        firebase.database().ref('state').once('/value/').then(snapshot => {
+        firebase.database().ref('data').on('value', (snapshot) => {
+            let value = snapshot.val();
+
+            console.log(value, "value");
+
             this.setState({
-                allData: snapshot.val().name
-            }, console.log(this.state.name, 'Data'))
+                class1: value.class1,
+                complains: value.complains,
+                diary: value.diary,
+                forms: value.forms
+            });
         })
 
     }
@@ -903,12 +987,51 @@ class NavBar extends React.Component {
                 query: obj.query
             }]
 
-        })
+        },
+            this.writeInFirebase()
+        )
+    }
+    updateDiary = (ind, obj) => {
+        console.log(ind, obj)
+        this.state.diary[ind] = {
+            english: obj.english,
+            urdu: obj.urdu,
+            islamiat: obj.islamiat,
+            pst: obj.pst,
+            science: obj.science,
+            computer: obj.computer,
+            maths: obj.maths
+        }
+        this.setState({
+            diary: this.state.diary
+        },
+            this.writeInFirebase()
+        )
+
+
+    }
+    updateForm = (obj) => {
+        this.setState({
+            forms: [...this.state.forms, obj]
+        },
+            this.writeInFirebase()
+        )
+    }
+    deleteForm = (key) => {
+        let deleteForm = this.state.forms.splice(key, 1);
+        this.setState({
+            forms: this.state.forms
+        },
+            this.writeInFirebase()
+        )
+    }
+    writeInFirebase = () => {
+        firebase.database().ref('data').set(this.state);
     }
 
     render() {
         this.sortCheck();
-        // this.readFromFirebase();
+        // this.writeInFirebase();
         return (
             <BrowserRouter>
                 <div className="NavBar">
@@ -921,7 +1044,7 @@ class NavBar extends React.Component {
                         <button><Link style={{ color: "white" }} to="/contactus">Contact Us</Link></button>
                         <button><Link style={{ color: "white" }} to="/diary">Diary</Link></button>
                         <button><Link style={{ color: "white" }} to="/login">Login</Link></button>
-                        
+
                     </section>
                     <section className="DropDown">
                         <DropDown routing={this.routing} />
@@ -929,17 +1052,18 @@ class NavBar extends React.Component {
                 </div>
                 <div id="gotoTop" />{/*  for navigation b/w bottom to top */}
                 <div id="MarginedDiv">
-                    <Route exact path="/" component={() => <Home />} />
+                    <Route exact path="/" component={() => <Home updateForm={this.updateForm} />} />
                     <Route path="/studentPortal" component={() => <StudentPortal view={this.state.class1}
                         updateComplainsFunc={this.updateComplains} complains={this.state.complains} />} />
                     <Route path="/events" component={() => <Events />} />
                     <Route path="/aboutUs" component={() => <AboutUs />} />
                     <Route path="/contactUs" component={() => <ContactUs />} />
-                    <Route path="/diary" component={() => <Diary diary={this.state.diary}/>} />
+                    <Route path="/diary" component={() => <Diary diary={this.state.diary} />} />
                     <Route path="/login" component={() => <LoginPage studentsRecord={this.state.class1}
                         deleteStudentFunc={this.deleteStudent} deleteComplainFunc={this.deleteComplain} updateStudentRecordFunc={this.updateStudentRecord}
-                        complains={this.state.complains} diary={this.state.diary} />} />
-
+                        complains={this.state.complains} diary={this.state.diary} updateDiary={this.updateDiary}
+                        forms={this.state.forms} deleteForm={this.deleteForm} />}
+                    />
                 </div>
                 <footer >
                     <a href="#gotoTop"><label>^</label></a>

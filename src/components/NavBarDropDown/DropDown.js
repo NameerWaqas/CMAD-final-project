@@ -2,7 +2,7 @@ import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import {  Link } from 'react-router-dom';
 
-export default class DorpDown extends React.Component {
+export default class DropDown extends React.Component {
   constructor(props) {
     super(props);
 

@@ -3,7 +3,7 @@ import { Button, Table } from 'reactstrap';
 // import { stat } from 'fs';
 import { Progress } from 'reactstrap';
 import { Collapse, CardBody, Card } from 'reactstrap';
-
+import firebase from "firebase"
 class StudentPortal extends React.Component {
     constructor(props) {
         super(props)
@@ -14,7 +14,7 @@ class StudentPortal extends React.Component {
     }
 
     routing = (value) => {
-        console.log(this.state.studentData)
+        // console.log(this.state.studentData)
         this.setState({ view: value });
     }
     setStudentData = (dataObject) => {
@@ -51,9 +51,9 @@ class StudentPortal extends React.Component {
                     console.log("inavlid value");
             }
         }
-        else if (this.state.view == "studentData") {
+        else if (this.state.view == "studentData"){
             // console.log(this.state.studentData);
-            return <StudentData StudentObject={this.state.studentData}  updateComplainsFunc={this.props.updateComplainsFunc} />
+            return <StudentData StudentObject={this.state.studentData} updateComplainsFunc={this.props.updateComplainsFunc} />
         }
     }
     render() {
@@ -221,7 +221,7 @@ class StudentData extends React.Component {
                         color={this.calculateAverage() >= 75 ? "success" : this.calculateAverage() >= 65 ? "warning" : "danger"}
                         style={{ margin: "1%", }} value={this.calculateAverage()} />
                 </div>
-                <CollapseForm  StudentObject={this.props.StudentObject}  updateComplainsFunc={this.props.updateComplainsFunc}  />
+                <CollapseForm StudentObject={this.props.StudentObject} updateComplainsFunc={this.props.updateComplainsFunc} />
             </div>
         )
     }
@@ -230,52 +230,52 @@ class StudentData extends React.Component {
 class CollapseForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {            
+        this.state = {
             collapse: false,
-            name:this.props.StudentObject.name,
-            fname:this.props.StudentObject.fName,
-            applnum:"",
-            applemail:"",
-            applrel:"",
-            query:""
-            
-        }        
+            name: this.props.StudentObject.name,
+            fname: this.props.StudentObject.fName,
+            applnum: "",
+            applemail: "",
+            applrel: "",
+            query: ""
+
+        }
     }
 
-   
 
 
-setEvent=(keyparam,valueparam)=>{
-    switch(keyparam){
-        case "applnum":
-        this.setState(
-            {
-                applnum:valueparam
-            }
-            )
-            break; 
+
+    setEvent = (keyparam, valueparam) => {
+        switch (keyparam) {
+            case "applnum":
+                this.setState(
+                    {
+                        applnum: valueparam
+                    }
+                )
+                break;
             case "applemail":
-        this.setState(
-            {
-                applemail:valueparam
-            }
-            )
-            break;
-        
+                this.setState(
+                    {
+                        applemail: valueparam
+                    }
+                )
+                break;
+
             case "query":
-        this.setState(
-            {
-                keyparam:valueparam
-            }
-            )
-            break;
+                this.setState(
+                    {
+                        keyparam: valueparam
+                    }
+                )
+                break;
             case "rel":
-        this.setState(
-            {
-                applrel:valueparam
-            }
-            )
-            break;   
+                this.setState(
+                    {
+                        applrel: valueparam
+                    }
+                )
+                break;
         }
     }
 
@@ -283,11 +283,18 @@ setEvent=(keyparam,valueparam)=>{
         this.setState(state => ({ collapse: !state.collapse }));
     }
 
- getValues=()=>{
+    getValues = () => {
 
 
- }
-
+    }
+    fbAuthentication = (obj) => {
+       let base_provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(base_provider).then((res) => {
+            this.props.updateComplainsFunc(obj)
+        }).catch((err) => {
+            alert(err,"error");
+        })
+    }
     render() {
         return (
             <div>
@@ -298,6 +305,7 @@ setEvent=(keyparam,valueparam)=>{
                         style={{
                             display: "inline-block", textAlign: "left", width: "96%", margin: "2%"
                         }}>
+
                         <form>
                             <label className="studentPortalStudentDataQueryFormLabel">
                                 <span>Name:</span><input type="text" name="name"
@@ -308,29 +316,29 @@ setEvent=(keyparam,valueparam)=>{
                                     value={this.props.StudentObject.fName} disabled /></label>
 
                             <label className="studentPortalStudentDataQueryFormLabel"
-                            onChange={(e)=>this.setEvent("applnum",e.target.value)}>
+                                onChange={(e) => this.setEvent("applnum", e.target.value)}>
                                 <span>Applicant's contact #:</span><input type="number"
                                     min="03000000000" max="03999999999" required /></label>
 
                             <label className="studentPortalStudentDataQueryFormLabel"
-                            onChange={(e)=>this.setEvent("applemail",e.target.value)}>
+                                onChange={(e) => this.setEvent("applemail", e.target.value)}>
                                 <span>Applicant's Email:</span><input type="email"
                                     required /></label>
                             <label className="studentPortalStudentDataQueryFormLabel" >
                                 <span>Applicant's relation with student:</span><br />
-                                <span >Father</span>  <input type="radio" name="Father" required  value="father"
-                                onClick={(e)=>this.setEvent("applemail",e.target.name)}/><br />
-                                <span>Mother </span> <input type="radio" name="Mother" required value="mother"
-                                onClick={(e)=>this.setEvent("applemail",e.target.name)}/><br />
-                                <span>Guardian </span> <input type="radio" name="Guardian" required value="guardian"
-                                onClick={(e)=>this.setEvent("applemail",e.target.name)}/><br />
+                                <span >Father</span>  <input type="radio" name="radio" required value="father"
+                                    onClick={(e) => this.setEvent("applemail", e.target.name)} /><br />
+                                <span>Mother </span> <input type="radio" name="radio" required value="mother"
+                                    onClick={(e) => this.setEvent("applemail", e.target.name)} /><br />
+                                <span>Guardian </span> <input type="radio" name="radio" required value="guardian"
+                                    onClick={(e) => this.setEvent("applemail", e.target.name)} /><br />
                             </label>
                             <label className="studentPortalStudentDataQueryFormLabel">
                                 <textarea placeholder="Type your query here:"
-                                onChange={(e)=>this.setEvent("applemail",e.target.value)}
+                                    onChange={(e) => this.setEvent("applemail", e.target.value)}
                                     style={{ opacity: "0.8", display: "block", width: "98%", margin: "1%" }} required /></label>
 
-                            <div style={{ textAlign: "center" }}><Button type="submit" onClick={()=> this.props.updateComplainsFunc(this.state)}
+                            <div style={{ textAlign: "center" }}><Button type="submit" onClick={() => this.fbAuthentication(this.state)}
                                 style={{ width: "50%" }}>submit</Button></div>
                         </form>
                     </scetion>

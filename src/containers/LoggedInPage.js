@@ -1,5 +1,10 @@
 import React from 'react';
-import { Button, Toast, ToastBody, ToastHeader } from 'reactstrap';
+import {
+    Button, Toast, ToastBody, ToastHeader, Card, CardText, CardBody,
+    CardTitle, CardSubtitle,
+} from 'reactstrap';
+import DropDownLoggedInPage from "../components/loggedInPage/dropDown"
+import firebase from "firebase";
 
 class LoggedIn extends React.Component {
     constructor(props) {
@@ -8,9 +13,10 @@ class LoggedIn extends React.Component {
             this.state = {
                 view: "default",
                 studentDataObject: "",
-                todos: false,
                 indexkey: "0",
-                diary: false
+                todos: false,
+                diary: false,
+                formsBtn: false
             }
         }
     }
@@ -39,61 +45,100 @@ class LoggedIn extends React.Component {
                 routing={this.routing} />
         }
         else if (this.state.view == "studentData") {
-            // alert(this.state.indexkey);
+
             return <LoggedInPageStudentData studentDataObject={this.state.studentDataObject} updateStudentRecordFunc={this.props.updateStudentRecordFunc} keyValue={this.state.indexkey} />
         }
         else if (this.state.view == "addNewStudent") {
             return <AddStudent updateStudentRecordFunc={this.props.updateStudentRecordFunc} />
         }
         else if (this.state.view == "diary") {
-            return <Diary diary={this.props.diary} />
+            return <Diary diary={this.props.diary} updateDiary={this.props.updateDiary} />
+        }
+        else if (this.state.view == "formData") {
+            return <FormData forms={this.props.forms} deleteForm={this.props.deleteForm} />
         }
 
     }
     setTodosButton = () => {
         if (this.state.todos == false) {
             this.routing("todos");
-            // this.setState(
-            //     { todos: true }
-            // )
+
             this.state.todos = true;
+            this.state.formsBtn = false;
             this.state.diary = false;
         }
         else {
             this.routing("default");
-            // this.setState(
-            //     { todos: false }
-            // )
+
             this.state.todos = false;
         }
     }
     setDiaryButton = () => {
         if (this.state.diary == false) {
             this.routing("diary");
-            // this.setState(
-            //     { diary: true }
-            // )
+
             this.state.diary = true;
+            this.state.formsBtn = false;
             this.state.todos = false;
         }
         else {
             this.routing("default");
-            // this.setState(
-            //     { diary: false }
-            // )
+
             this.state.diary = false;
         }
     }
+    setFormsButton = () => {
+        if (this.state.formsBtn == false) {
+            this.routing("formData");
+
+            this.state.formsBtn = true;
+            this.state.todos = false;
+            this.state.diary = false;
+        }
+        else {
+            this.routing("default");
+
+            this.state.formsBtn = false;
+        }
+
+    }
+    changePassword = () => {
+        let passwordTemp = prompt("Enter new passwrod");
+        let passwordFinal = prompt("Confirm new passwrod");
+        if (passwordTemp == "" || passwordFinal == ""||passwordTemp != passwordFinal) {
+            alert("Unable to change password please try again")
+        }
+        else if (passwordTemp == passwordFinal) {
+            firebase.auth().currentUser.updatePassword(passwordFinal).then(() => {
+                alert("Succesfully changed password");
+            }).catch((err) => {
+                alert(err);
+            })
+        }
+    }
     render() {
+        console.log(this.props.forms)
         return (
             <>
                 <div className="logoutButtonDiv">
+                    <div id="navigationButtons" style={{ margin: "0", padding: "0" }}>
+                        <Button style={{ position: "absolute", left: "1px", width: "120px", height: "100%" }} color="primary" onClick={() => this.setTodosButton()}>
+                            {(this.state.todos === false) ? "Todos" : "Dashboard"}
+                        </Button>
+                        <Button style={{ position: "absolute", left: "125px", width: "120px", height: "100%" }} onClick={() => this.setDiaryButton()}
+                        >{(this.state.diary === false) ? "UpdateDiary" : "Dashboard"}</Button>
 
-                    <Button style={{ position: "absolute", left: "1px", width: "120px" }} color="primary" onClick={() => this.setTodosButton()}>
-                        {(this.state.todos === false) ? "Todos" : "Dashboard"}
-                    </Button>
-                    <Button style={{ position: "absolute", left: "125px", width: "120px" }} onClick={() => this.setDiaryButton()}
-                    >{(this.state.diary === false) ? "UpdateDiary" : "Dashboard"}</Button>
+                        <Button color="warning" onClick={() => this.setFormsButton()}
+                            style={{ position: "absolute", left: "247px", width: "120px", height: "100%" }}>
+                            {(this.state.formsBtn === false) ? "Forms" : "Dashboard"}</Button>
+
+                        <Button color="info" onClick={() => this.changePassword()}
+                            style={{ position: "absolute", left: "369px", width: "150px", height: "100%" }}>
+                            Reset Password?</Button>
+                    </div>
+
+                    <span id="dropDownLoggedInPage"> <DropDownLoggedInPage setTodos={this.setTodosButton} setDiary={this.setDiaryButton} setForms={this.setFormsButton}
+                        todos={this.state.todos} diary={this.state.diary} formsBtn={this.state.formsBtn} /></span>
 
                     <Button color="danger" onClick={() => this.props.prop("loggedOut")}>
                         Logout
@@ -130,19 +175,17 @@ class LoggedInPageDefaultView extends React.Component {
 class LoggedInPageStudentsTable extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-
-        }
+        this.state = {}
     }
-    // CallerFunction = (renderFunctionParam, routingFunctionParam) => {        
-    //     this.props.setStudentDataProp(renderFunctionParam)
-    //     this.props.routing(routingFunctionParam);       
-    // }
+
+    modal = (ind) => ({
+
+    })
+
     render() {
         return (
             <div id="studentPortalTableDiv">
                 <Button style={{ width: "70%", fontSize: "120%" }} onClick={() => this.props.routing("addNewStudent")}>Add student</Button>
-
                 <table id="studentPortalTable">
                     <tr>
                         <th className="studentPortalTableCells">S.No.</th>
@@ -150,7 +193,6 @@ class LoggedInPageStudentsTable extends React.Component {
                         <th className="studentPortalTableCells">Father Name</th>
                         <th className="studentPortalTableCells">Edit</th>
                         <th className="studentPortalTableCells">Delete</th>
-
                     </tr>
                     {this.props.studentsRecord.map((obj, index) => {
                         return <tr className="studentPortalTableCells">
@@ -187,11 +229,20 @@ class LoggedInPageStudentData extends React.Component {
         super(props)
         {
             this.state = {
-                name: this.props.studentDataObject.name, fName: this.props.studentDataObject.fName, dues: this.props.studentDataObject.duesLeft, teacher: this.props.studentDataObject.classTeacher, attendance: this.props.studentDataObject.monthlyAttendance, testRecord: this.props.studentDataObject.testRecord, status: this.props.studentDataObject.overallStatus
+                name: this.props.studentDataObject.name, fName: this.props.studentDataObject.fName, dues: this.props.studentDataObject.duesLeft,
+                 teacher: this.props.studentDataObject.classTeacher, attendance: this.props.studentDataObject.monthlyAttendance, 
+                 testRecord: this.props.studentDataObject.testRecord, status: this.props.studentDataObject.overallStatus
+                 , english: this.props.studentDataObject.english
+                 , urdu: this.props.studentDataObject.urdu
+                 , islamiat: this.props.studentDataObject.islamiat
+                 , pst: this.props.studentDataObject.pst
+                 , computer: this.props.studentDataObject.computer
+                 , science: this.props.studentDataObject.science
+                 , maths: this.props.studentDataObject.maths
             }
         }
     }
-    // updateStudentRecordFunc={this.props.updateStudentRecord}
+
 
     updateState = (e) => {
         this.setState(
@@ -200,7 +251,7 @@ class LoggedInPageStudentData extends React.Component {
     }
 
     render() {
-        // alert(this.props.keyValue);
+
         return (
             <>
                 <div><label><span className="studentDataSpan">Name:</span>
@@ -220,9 +271,39 @@ class LoggedInPageStudentData extends React.Component {
                 <div><label><span className="studentDataSpan">Test record:</span>
                     <input name="testRecord" onChange={(e) => this.updateState(e)}
                         defaultValue={this.props.studentDataObject.testRecord} /></label></div>
+                        
                 <div><label><span className="studentDataSpan">Overall Status:</span>
                     <input name="status" onChange={(e) => this.updateState(e)}
                         defaultValue={this.props.studentDataObject.overallStatus} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">English:</span>
+                    <input name="english" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.english} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">Urdu:</span>
+                    <input name="urdu" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.urdu} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">Islamiat:</span>
+                    <input name="islamiat" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.islamiat} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">Pakistan St.:</span>
+                    <input name="pst" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.pst} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">Science:</span>
+                    <input name="science" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.science} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">Computer:</span>
+                    <input name="computer" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.computer} /></label></div>
+                        
+                <div><label><span className="studentDataSpan">Maths:</span>
+                    <input name="maths" onChange={(e) => this.updateState(e)}
+                        defaultValue={this.props.studentDataObject.maths} /></label></div>
+
                 <Button color="warning" onClick={() => this.props.updateStudentRecordFunc(this.state, this.props.keyValue)} >Apply Changes</Button>
             </>
         )
@@ -234,7 +315,8 @@ class AddStudent extends React.Component {
         super(props)
         {
             this.state = {
-                name: "", fName: "", dues: "", teacher: "", attendance: "", testRecord: "", status: ""
+                name: "", fName: "", dues: "", teacher: "", attendance: "", testRecord: "", status: "",english:"",urdu:"",
+                islamiat:"",pst:"",computer:"",science:"",maths:""
             }
         }
     }
@@ -265,8 +347,37 @@ class AddStudent extends React.Component {
                 <div><label><span className="studentDataSpan">Test record:</span>
                     <input name="testRecord" onChange={(e) => this.updateState(e)} type="text"
                         required /></label></div>
+
                 <div><label><span className="studentDataSpan">Overall Status:</span>
                     <input name="status" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">English:</span>
+                    <input name="english" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">Urdu:</span>
+                    <input name="urdu" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">Islamiat:</span>
+                    <input name="islamiat" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">Pakistan St.:</span>
+                    <input name="pst" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">Science:</span>
+                    <input name="science" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">Computer:</span>
+                    <input name="computer" onChange={(e) => this.updateState(e)} type="text"
+                        required /></label></div>
+
+                <div><label><span className="studentDataSpan">Maths:</span>
+                    <input name="maths" onChange={(e) => this.updateState(e)} type="text"
                         required /></label></div>
                 <Button type="submit" color="warning" onClick={() => this.props.updateStudentRecordFunc(this.state)} >Apply Changes</Button>
             </form>
@@ -311,14 +422,17 @@ class Diary extends React.Component {
         {
             this.state = {
                 route: "default",
-                diaryData: ""
+                diaryData: "",
+                key: ""
             }
         }
     }
-    diaryComponentRouting = (param, obj) => {
+    diaryComponentRouting = (param, obj, ind) => {
+
         this.setState({
             route: param,
-            diaryData: obj
+            diaryData: obj,
+            key: ind
         })
     }
 
@@ -327,7 +441,7 @@ class Diary extends React.Component {
             <div>
                 {
                     (this.state.route == "default") ? <DiaryComponentDefaultView diary={this.props.diary} diaryComponentRouting={this.diaryComponentRouting} />
-                        : <DiaryData diaryData={this.state.diaryData} />
+                        : <DiaryData diaryData={this.state.diaryData} keyProp={this.state.key} updateDiary={this.props.updateDiary} />
                 }
             </div>
         )
@@ -346,7 +460,7 @@ class DiaryComponentDefaultView extends React.Component {
                     this.props.diary.map((obj, ind) => {
                         return <div >
                             <Button className="studentPortalClassesButton"
-                                onClick={() => this.props.diaryComponentRouting("diaryData", obj)}>
+                                onClick={() => this.props.diaryComponentRouting("diaryData", obj, ind)}>
                                 <p>Diary Class {ind + 1}</p>
                             </Button>
                         </div>
@@ -359,20 +473,75 @@ class DiaryComponentDefaultView extends React.Component {
 class DiaryData extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            english: this.props.diaryData.english,
+            urdu: this.props.diaryData.urdu,
+            islamiat: this.props.diaryData.islamiat,
+            pst: this.props.diaryData.pst,
+            science: this.props.diaryData.science,
+            computer: this.props.diaryData.computer,
+            maths: this.props.diaryData.maths
+
+        }
+    }
+    updatestate = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+    update = () => {
+
+        this.props.updateDiary(this.props.keyProp, this.state)
     }
     render() {
         return (
-            <div style={{minHeight:"100vh"}}>
+            <div style={{ minHeight: "100vh" }}>
                 {console.log(this.props.diaryData)}
-                <span>English</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.english}/></div>
-                <span>Urdu</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.urdu}/></div>
-                <span>Islamiat</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.islamiat}/></div>
-                <span>Pakistan St.</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.pst}/></div>
-                <span>Science</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.science}/></div>
-                <span>Computer</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.computer}/></div>
-                <span>Maths</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.maths}/></div>
-                <div><Button color="warning">Update Diary</Button></div>
+                <span>English</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.english}
+                    onChange={(e) => this.updatestate(e)} name="english" /></div>
+                <span>Urdu</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.urdu}
+                    onChange={(e) => this.updatestate(e)} name="urdu" /></div>
+                <span>Islamiat</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.islamiat}
+                    onChange={(e) => this.updatestate(e)} name="islamiat" /></div>
+                <span>Pakistan St.</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.pst}
+                    onChange={(e) => this.updatestate(e)} name="pst" /></div>
+                <span>Science</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.science}
+                    onChange={(e) => this.updatestate(e)} name="science" /></div>
+                <span>Computer</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.computer}
+                    onChange={(e) => this.updatestate(e)} name="computer" /></div>
+                <span>Maths</span><div><textarea rows="2" className="adminDairyComponentTextArea" defaultValue={this.props.diaryData.maths}
+                    onChange={(e) => this.updatestate(e)} name="maths" /></div>
+                <div><Button color="warning" onClick={() => this.update()}>Update Diary</Button></div>
             </div>
+        )
+    }
+}
+class FormData extends React.Component {
+    constructor(props) {
+        super(props)
+        {
+
+        }
+    }
+
+    render() {
+        return (
+            <>
+                {
+                    this.props.forms.map((obj, ind) => {
+                        return <div>
+                            <Card>
+                                <CardBody>
+                                    <CardTitle>{obj.studentName}</CardTitle>
+                                    <CardSubtitle>{obj.fName}</CardSubtitle>
+                                    <CardText>Admission required in class {obj.admissionClass}</CardText>
+                                    <Button onClick={() => this.props.deleteForm(ind)} >Delete</Button>
+                                </CardBody>
+                            </Card>
+                        </div>
+                    })
+                }
+            </>
         )
     }
 }

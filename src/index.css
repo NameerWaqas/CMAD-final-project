@@ -1,14 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;   
+  font-family: 'Permanent Marker', cursive;
 }
 
 .sliderImg{
 object-fit: fill;
 width: 100%;
-height: 400px;
+height: 100vh
 }
 .NavBarSection{
 
@@ -132,8 +130,9 @@ height: 50px;
     padding-left: 1% !important;
     padding-right: 1% !important;
   }
+  /* ************************************************************************************* */
   img{
-    height: 400px !important;
+    height: 400px ;
   }
   .studentPortalStudentDataQueryFormLabel{
     width: "100%";
@@ -150,6 +149,13 @@ width:28%;
     padding: 1%;
   background: linear-gradient(to left,#01579b,#1565c0,#0d47a1,#01579b,#0277bd ) ; 
   color: white;
+  }
+  select{
+    width: 40%;
+    border: 1px solid  rgba(0, 89, 255, 0.767);;
+    border-radius: 20px;
+    padding: 1%;
+  background: linear-gradient(to left,#01579b,#1565c0,#0d47a1,#01579b,#0277bd ) ;
   }
   #studentPortalStudentDataQueryForm{
     color: white;
@@ -179,4 +185,130 @@ width:28%;
     width:80%;
     margin:1%
   }
+  .aboutUsHomearticle1{
+    text-align: left;
+  display: inline-block;
+  } 
+  .aboutUsHomearticle2{
+    text-align: left;
+    display: inline-block;
+    height: 100%
+  } 
   
+  .aboutUsHomeSection{
+    overflow: hidden;   
+    height: 500px;
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    align-items: center;  
+  
+    background-color: #0292e6;
+    color: white;
+    
+  }
+ 
+  .evntsHomeArticle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 500px;  
+    
+  }
+  
+  #rotateimg{
+   transform: rotate(90deg);
+    position: absolute;
+    left: 10px;
+  }
+  .eventsHomeSection{
+    overflow: hidden;   
+    height: 500px;
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    align-items: center;  
+   
+  }
+  #evntsHomeArticleH1{
+    margin-left: "200px";
+     font-size: "500%"
+  }
+  #evntsHomeArticleH1{
+    margin-left: 200px;
+     font-size: 500%
+  }
+  td{
+    text-align: justify
+  }
+  #studentPortalHomeArticle{
+    display: flex;
+    flex-direction: row;
+        
+  }
+  #studentPortalHomediv1{
+   
+    flex: 3;
+  }
+  #studentPortalHomediv2{
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    flex: 4;
+    text-align: justify;
+/* overflow: hidden */
+  }
+  #studentPortalHomeSection{
+    color: white;
+    background-color: #0292e6;
+    height:440px; 
+   
+  }
+  #contactUsHomeSection{
+    display: flex;
+    flex-direction: row;
+    background-color: #0292e6;
+    height: 400px;
+    color: white;
+    
+  }
+  #contactUsHomeArticle{
+display: flex;
+flex-direction: column;
+flex: 1;
+margin: auto;
+  }
+  #aboutUsPageImg{
+    display:block;
+    height: 70vh;
+  }
+  #aboutUsPageImg>img{
+    background-size: cover;
+display: block;
+width: 100%;
+height: 70vh;
+  }
+
+  .facultyImageFrame{
+    display: inline-block;
+    width: 270px;
+    height: 270px;
+    border: 2px solid black;
+    margin: 2%;
+    overflow: hidden;
+  }
+  .facultyImageFrame>img{
+    width: 266px;
+    height: 266px;
+  }
+  /* .facultyImageFrame>img:hover{
+    transition: 300ms;
+    width: 286px;
+    height: 286px;
+  } */
+  .facultyImageFrame>span{
+display: block;
+width: inherit;
+height:inherit;
+background-color: black;
+  }

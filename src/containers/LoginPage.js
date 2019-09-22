@@ -8,7 +8,7 @@ import firebase from "firebase";
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {           
+        this.state = {
             check: "loggedOut"
         }
     }
@@ -20,16 +20,17 @@ class LoginPage extends React.Component {
         }
         else if (this.state.check == "loggedIn") {
             return <LoggedIn prop={this.UpdateCheck}
-            deleteStudentFunc={this.props.deleteStudentFunc}  updateStudentRecordFunc={this.props.updateStudentRecordFunc}
-             studentsRecord={this.props.studentsRecord}  complains={this.props.complains} deleteComplainFunc={this.props.deleteComplainFunc}
-             diary={this.props.diary} />
+                deleteStudentFunc={this.props.deleteStudentFunc} updateStudentRecordFunc={this.props.updateStudentRecordFunc}
+                studentsRecord={this.props.studentsRecord} complains={this.props.complains} deleteComplainFunc={this.props.deleteComplainFunc}
+                diary={this.props.diary} updateDiary={this.props.updateDiary} forms={this.props.forms}
+                deleteForm={this.props.deleteForm} />
         }
     }
     UpdateCheck = (param) => {
-        if(param=="loggedOut"){
-          firebase.auth().signOut().then(
-              console.log("loggedOut")
-          )
+        if (param == "loggedOut") {
+            firebase.auth().signOut().then(
+                console.log("loggedOut")
+            )
         }
         this.setState(
             {
@@ -39,24 +40,24 @@ class LoginPage extends React.Component {
     }
 
     // Get the Auth service for the default app
-    userStatusTracker=()=>{
-        firebase.auth().onAuthStateChanged(user=>{
-            if(user)
-            {
+    userStatusTracker = () => {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
                 this.UpdateCheck("loggedIn");
+                // console.log(user)
             }
         })
     }
-    componentWillMount=()=>{
+    componentDidMount = () => {
         this.userStatusTracker();
     }
     render() {
-       
+
 
         return (
-            
+
             this.LoginPageRouting()
-            
+
         )
     }
 }
@@ -82,22 +83,26 @@ class WhenLoggedOut extends React.Component {
         }
     }
     Authenticate = () => {
-        firebase.auth().signInWithEmailAndPassword(this.state.id,this.state.password).then(res=>{
+       
+        firebase.auth().signInWithEmailAndPassword(this.state.id, this.state.password).then(res => {
             this.props.prop("loggedIn");
-        }).catch(err=>alert(err))    
+        }).catch(err => alert(err))
+        
+        // for development timeperiod
+        // this.props.prop("loggedIn");
 
     }
-    
+
     render() {
         return (
             <div id="LoginPageDiv">
                 <div id="LoginPageSection">
                     <h2 >Login as Administrator</h2>
-                               
+
                     <Input type="email"
                         id="LoginPageEmail" placeholder="Enter Email=> admin@auth.com"
                         onChange={(param) => this.getParam(param.target.value, "id")} />
-                                  
+
                     <Input type="password"
                         id="LoginPagePassword" placeholder="Enter password=> nameerwaqas"
                         onChange={(param) => this.getParam(param.target.value, "password")} />
@@ -108,4 +113,5 @@ class WhenLoggedOut extends React.Component {
     }
 
 }
+
 export default LoginPage;
