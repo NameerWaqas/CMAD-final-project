@@ -185,7 +185,7 @@ class LoggedInPageStudentsTable extends React.Component {
     render() {
         return (
             <div id="studentPortalTableDiv">
-                <Button style={{ width: "70%", fontSize: "120%" }} onClick={() => this.props.routing("addNewStudent")}>Add student</Button>
+                <Button style={{ width: "70%", fontSize: "120%" }} onClick={() => this.props.routing("addNewStudent")}>Add Student</Button>
                 <table id="studentPortalTable">
                     <tr>
                         <th className="studentPortalTableCells">S.No.</th>

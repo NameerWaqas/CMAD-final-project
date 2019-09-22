@@ -893,9 +893,8 @@ class NavBar extends React.Component {
     updateStudentRecord = (param, key = "undefined") => {
 
         if (key == "undefined") {
-            this.setState({
-
-                class1: [...this.state.class1,
+            
+                this.state.class1=[...this.state.class1,
                 {
                     name: param.name,
                     fName: param.fName,
@@ -915,10 +914,15 @@ class NavBar extends React.Component {
 
 
                 }]
+                this.setState(
+                    {
+                        class1: this.state.class1
+                    },
+                    this.writeInFirebase()
+                )
 
-            },
-                this.writeInFirebase()
-            )
+                       
+            
         }
         else {
 
